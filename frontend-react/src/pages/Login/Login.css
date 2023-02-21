@@ -1,0 +1,39 @@
+.bgimg {
+    width: 91vw;
+    height: 50.8vw;
+    margin: -1vw;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 96px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #5D5A88;
+}
+
+.logo {
+    width: 7vw;
+    height: 4.3vw;
+
+}
+
+.titleContainer {
+    display: flex;
+    padding: 2vw 3vw;
+    gap: 25px;
+}
+
+.bannerimg {
+    width: 40vw;
+    height: 40vw;
+}
