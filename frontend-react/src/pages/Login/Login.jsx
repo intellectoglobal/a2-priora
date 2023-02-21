@@ -16,6 +16,9 @@ export default function Login() {
                 </div>
                   <img className="bannerimg" alt="banner" src={Teaching}/>
             </div>
+            <div>
+                <img className="avatar" alt="avatar" />
+            </div>
         </div>
     )
 }
