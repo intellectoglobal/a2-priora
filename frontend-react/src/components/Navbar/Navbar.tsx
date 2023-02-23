@@ -12,11 +12,15 @@ const Navbar = () => {
       </div>
       <div className="nav-links">
         <ul>
-          <Ripples style={{ display: 'inline-flex',
-  borderRadius: 25,
-  overflow: 'hidden',}}>
+          <Ripples
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
             <li>
-              <Link to="" className="links">
+              <Link to="/" className="links">
                 Home
               </Link>
             </li>
