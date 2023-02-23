@@ -2,6 +2,7 @@ import React from "react";
 import Ripples from "react-ripples";
 import "./Course.css";
 import Courseimg from "../../Assets/courseimg.svg";
+import Star from "../../Assets/Star 4.svg";
 const Course = () => {
   const data = [
     {
@@ -13,6 +14,9 @@ const Course = () => {
       end_time: "10:00AM",
       coursedelivery: "Via Zoom",
       funding: "UTAP Available",
+      pdu:6,
+      cet:6,
+      set:6,
     },
     {
       courseimg: Courseimg,
@@ -23,6 +27,9 @@ const Course = () => {
       end_time: "10:00AM",
       coursedelivery: "Via Zoom",
       funding: "UTAP Available",
+      pdu:6,
+      cet:6,
+      set:6,
     },
     {
       courseimg: Courseimg,
@@ -33,6 +40,9 @@ const Course = () => {
       end_time: "10:00AM",
       coursedelivery: "Via Zoom",
       funding: "UTAP Available",
+      pdu:6,
+      cet:6,
+      set:6,
     },
     {
       courseimg: Courseimg,
@@ -43,6 +53,9 @@ const Course = () => {
       end_time: "10:00AM",
       coursedelivery: "Via Zoom",
       funding: "UTAP Available",
+      pdu:6,
+      cet:6,
+      set:6,
     },
     {
       courseimg: Courseimg,
@@ -53,6 +66,9 @@ const Course = () => {
       end_time: "10:00AM",
       coursedelivery: "Via Zoom",
       funding: "UTAP Available",
+      pdu:6,
+      cet:6,
+      set:6,
     },
     {
       courseimg: Courseimg,
@@ -63,6 +79,9 @@ const Course = () => {
       end_time: "10:00AM",
       coursedelivery: "Via Zoom",
       funding: "UTAP Available",
+      pdu:6,
+      cet:6,
+      set:6,
     },
   ];
   return (

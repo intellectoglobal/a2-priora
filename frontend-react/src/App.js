@@ -1,9 +1,9 @@
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar.tsx";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Components/Home/Home";
-import Footer from "./Components/Footer/Footer";
-import Course from "./Components/Course/Course";
+import Home from "./components/Home/Home.tsx";
+import Footer from "./components/Footer/Footer.tsx";
+import Course from "./components/Course/Course.tsx";
 
 function App() {
   return (
