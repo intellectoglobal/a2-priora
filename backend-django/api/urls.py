@@ -1,4 +1,4 @@
-from django.url import path,include
+from django.urls import path,include
 
 urlpatterns = [
     path('course_register/',include("course_register_fe.urls")),

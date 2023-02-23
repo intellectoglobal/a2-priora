@@ -1,25 +1,35 @@
 from django.db import models
-
-payment_status = (
-    ('None':'None'),
-    ('Paid':'Paid'),
-    ('Not Yet':'Not Yet'),
+from payment.models import Payment
+from courses_be.models import NewCourse
+membership_type = (
+    ('Self', 'Self'),
+    ('Company', 'Company')
 )
 
 
 class CouurseRegister(models.Model):
-    register_id=models.AutoField(primary_key=True)
-    selected_course=models.ForeignKey()
-    applicant_name=models.CharField(max_length=20,blank=False)
-    contact_no=models.IntegerField(max_digits=10,blank=False)
-    email=models.EmailField(blank=False)
-    alternative_email=models.EmailField()
-    address=models.CharField(max_length=50)
-    postal_code=models.IntegerField()
-    FIN_NRIC_passport_no =models.IntegerField(max_digits=20)
-    company_name=models.CharField(max_length=30)
-    membership_type=models.BooleanField(default=False)
-    membership_n0=models.IntegerField()
-    payment_status=models.CharField()
-    payment_receipt=models.
-   
+    register_id = models.AutoField(
+        db_column='register_id', primary_key=True, blank=False)
+    selected_course = models.ForeignKey(
+        NewCourse, models.PROTECT, db_column='selected_course', blank=False)
+    applicant_name = models.CharField(
+        db_column='applicant_name', max_length=20, blank=False)
+    contact_no = models.IntegerField(
+        db_column='contact_no', blank=False)
+    email = models.EmailField(db_column='email', blank=False)
+    alternative_email = models.EmailField(
+        db_column='alternative_email', blank=True)
+    address = models.CharField(db_column='address', max_length=50, blank=False)
+    postal_code = models.IntegerField(db_column='postal_code', blank=False )
+    FIN_NRIC_Passport_no = models.IntegerField(
+        db_column='FIN_NRIC_Passport_no', blank=False)
+    company_name = models.CharField(
+        db_column='company_name', max_length=30, blank=False)
+    membership_type = models.CharField(
+        db_column='membership_type', max_length=20, default='Self', choices=membership_type, blank=False)
+    membership_no = models.IntegerField(
+        db_column='membership_no',   blank=False)
+    payment = models.ForeignKey(Payment, models.PROTECT, db_column='payment' , blank=False)
+
+    class Meta:
+        db_table = 'course_register'
