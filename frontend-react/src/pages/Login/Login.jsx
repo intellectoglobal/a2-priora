@@ -39,12 +39,16 @@ export default function Login() {
             }}
             sx={{
               boxShadow: 10,
-              border: "100px",
+              borderRadius: "25px",
+              "& .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root ": {
+                borderRadius: "25px",
+              },
             }}
           />
           <TextField
             id="input-with-icon-textfield"
-            label="Password"
+                      label="Password"
+                      type="password"
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
@@ -54,6 +58,10 @@ export default function Login() {
             }}
             sx={{
               boxShadow: 10,
+              borderRadius: "25px",
+              "& .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root ": {
+                borderRadius: "25px",
+              },
             }}
           />
         </div>

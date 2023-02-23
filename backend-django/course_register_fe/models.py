@@ -7,7 +7,7 @@ membership_type = (
 )
 
 
-class CouurseRegister(models.Model):
+class CourseRegister(models.Model):
     register_id = models.AutoField(
         db_column='register_id', primary_key=True, blank=False)
     selected_course = models.ForeignKey(
