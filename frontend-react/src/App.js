@@ -1,10 +1,21 @@
-import './App.css';
-import Login from './pages/Login/Login';
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Components/Home/Home";
+import Footer from "./Components/Footer/Footer";
+import Course from "./Components/Course/Course";
 
 function App() {
   return (
     <div className="App">
-      <Login/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element={<About/>}/> */}
+        {/* <Route path="/careers" element={<Careers/>}/> */}
+        <Route path="/course" element={<Course />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
