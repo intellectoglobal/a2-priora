@@ -10,8 +10,6 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import Password from "@mui/icons-material/Password";
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom"
-
-
 export default function Login() {
   return (
     <div className="loginContainer">
@@ -39,12 +37,19 @@ export default function Login() {
             }}
             sx={{
               boxShadow: 10,
-              border: "100px",
+              borderRadius: "100px ",
+              "&.css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root":{
+                borderRadius: "100px ",
+              }
+
             }}
           />
           <TextField
             id="input-with-icon-textfield"
+        
             label="Password"
+            type="password"
+        
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
