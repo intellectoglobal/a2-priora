@@ -1,6 +1,7 @@
 from django.db import models
 from payment.models import Payment
 from courses_be.models import NewCourse
+
 membership_type = (
     ('Self', 'Self'),
     ('Company', 'Company')
@@ -20,7 +21,7 @@ class CourseRegister(models.Model):
     alternative_email = models.EmailField(
         db_column='alternative_email', blank=True)
     address = models.CharField(db_column='address', max_length=50, blank=False)
-    postal_code = models.IntegerField(db_column='postal_code', blank=False )
+    postal_code = models.IntegerField(db_column='postal_code', blank=False)
     FIN_NRIC_Passport_no = models.IntegerField(
         db_column='FIN_NRIC_Passport_no', blank=False)
     company_name = models.CharField(
@@ -29,7 +30,14 @@ class CourseRegister(models.Model):
         db_column='membership_type', max_length=20, default='Self', choices=membership_type, blank=False)
     membership_no = models.IntegerField(
         db_column='membership_no',   blank=False)
-    payment = models.ForeignKey(Payment, models.PROTECT, db_column='payment' , blank=False)
+    payment = models.ForeignKey(
+        Payment, models.PROTECT, db_column='payment', blank=False)
 
     class Meta:
         db_table = 'course_register'
+
+
+class Register_ID(models.Model):
+
+    register_id = models.ForeignKey(CourseRegister, models.PROTECT,
+                                    db_column='register_id', blank=False)
