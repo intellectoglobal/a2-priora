@@ -1,4 +1,5 @@
 import "./App.css";
+import 'antd/dist/reset.css'
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home.tsx";
 import Course from "./Components/Course/Course.tsx";
