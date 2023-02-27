@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home/Home.tsx";
-import Course from "./components/Course/Course.tsx";
+import Home from "./Components/Home/Home.tsx";
+import Course from "./Components/Course/Course.tsx";
 import Login from "../src/AdminPage/Login/Login";
 
 function App() {
