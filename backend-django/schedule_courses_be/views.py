@@ -18,11 +18,17 @@ class ScheduleCourseView(APIView):
         return Response({"Response": "Course is successfully registered.", "data": serializer.data})
 
     def get(self, request, *args, **kwargs):
-        datas = ScheduleCourse.objects.all()
-        data = [{
-            "date": i.start_date,
-                "course_title": i.select_course.course_title,
-                "seats": i.max_seats,
-                "booked": ""
-                }for i in datas]
+        if request.method == 'GET':
+            datas = ScheduleCourse.objects.all()
+            data = [{
+                    "date": i.start_date,
+                    "course_title": i.select_course.course_title,
+                    "seats": i.max_seats,
+                    "booked": "",
+                    }
+                    for i in datas]
         return Response(data)
+
+
+
+   

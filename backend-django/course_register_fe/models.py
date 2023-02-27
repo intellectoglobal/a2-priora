@@ -1,18 +1,27 @@
 from django.db import models
 from payment.models import Payment
-from courses_be.models import NewCourse
+from courses_be.models import Course
 
 membership_type = (
     ('Self', 'Self'),
     ('Company', 'Company')
 )
 
-
+sponsership_type=(
+    ('PE','PE'),
+    ('RE','RE'),
+    ('RTO','RE'),
+    ('WSHO','RE'),
+    ('Not Applicable', 'Not Applicable')
+)
 class CourseRegister(models.Model):
     register_id = models.AutoField(
         db_column='register_id', primary_key=True, blank=False)
     selected_course = models.ForeignKey(
-        NewCourse, models.PROTECT, db_column='selected_course', blank=False)
+        Course, models.PROTECT, db_column='selected_course', blank=False)
+    sponsorship_type = models.CharField(
+        db_column='sponsorship_type', max_length=25, default='Not Applicable', choices=sponsership_type, blank=False)
+
     applicant_name = models.CharField(
         db_column='applicant_name', max_length=20, blank=False)
     contact_no = models.IntegerField(
@@ -35,9 +44,3 @@ class CourseRegister(models.Model):
 
     class Meta:
         db_table = 'course_register'
-
-
-class Register_ID(models.Model):
-
-    register_id = models.ForeignKey(CourseRegister, models.PROTECT,
-                                    db_column='register_id', blank=False)

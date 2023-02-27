@@ -5,3 +5,5 @@ class CourseRegisterSerializer(serializers.ModelSerializer):
     class Meta :
         model = CourseRegister
         fields = "__all__"
+
+ 
