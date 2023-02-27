@@ -1,10 +1,9 @@
 import "./App.css";
-import 'antd/dist/reset.css';
+import "antd/dist/reset.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home/Home.tsx";
-import Course from "./components/Course/Course.tsx";
+import Home from "./Components/Home/Home.tsx";
+import Course from "./Components/Course/Course.tsx";
 import Login from "../src/AdminPage/Login/Login";
-import SponserForm from "./components/SponserForm/SponserForm.tsx";
 
 function App() {
   return (
@@ -14,11 +13,10 @@ function App() {
         <Route path="admin" element={<Login />} />
         {/* <Route path="/about" element={<About/>}/> */}
         {/* <Route path="/careers" element={<Careers/>}/> */}
-        <Route path="/course" element={<Course />}/>
-        <Route path="/sform" element={<SponserForm/>}/>
+        <Route path="/course" element={<Course />} />
       </Routes>
     </div>
   );
 }
 
-export default App;
+export default App;
