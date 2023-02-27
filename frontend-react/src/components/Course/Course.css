@@ -41,7 +41,14 @@
  font-family: Roboto Slab;
  font-size:0.8rem;
  padding:0.2rem;
-
+}
+.star-rating{
+  display:flex;
+  flex-direction:column;
+}
+.star-rating img{
+  width:2rem;
+  margin:0.5rem 0.5rem;
 }
 .course-button {
   float:left;

@@ -1,20 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter  } from 'react-router-dom';
-import AdminRoute from './AdminRoute';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import AdminRoute from "./AdminRoute";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-            <AdminRoute/>
     <BrowserRouter>
-            <App />
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
-
 
 reportWebVitals();
