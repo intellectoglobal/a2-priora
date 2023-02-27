@@ -25,7 +25,7 @@ class ScheduleCourse(models.Model):
     day_period = models.CharField(
         db_column='day_period', max_length=20, blank=False)
     end_date = models.DateField(db_column='end_date', blank=False)
-    max_seat = models.IntegerField(db_column='max_seat', blank=False)
+    max_seats = models.IntegerField(db_column='max_seat', blank=False)
     fee = models.IntegerField(db_column='fee', blank=False)
     confirmation_email = models.CharField(
         db_column='confirmation_email', max_length=20, choices=confirmation_email, blank=False)
