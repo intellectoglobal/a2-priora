@@ -3,6 +3,7 @@ import Board from "../../Assets/Group 1.svg";
 import BG from "../../Assets/Group 2.svg";
 import Ripples from "react-ripples";
 import "./Home.css";
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar.tsx";
 import Footer from "../Footer/Footer.tsx";
 
@@ -23,9 +24,11 @@ const Home = () => {
           </div>
           <div className="home-button">
             <Ripples>
-              <button type="button" className="home-btn">
-                Enroll-Now
-              </button>
+              <Link to="/course" className="link-tab">
+                <button type="button" className="home-btn">
+                  Enroll-Now
+                </button>
+              </Link>
             </Ripples>
           </div>
         </div>
