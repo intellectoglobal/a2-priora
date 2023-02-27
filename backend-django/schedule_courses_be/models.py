@@ -1,5 +1,5 @@
 from django.db import models
-from courses_be.models import NewCourse
+from courses_be.models import Courses
 confirmation_email = (
     ('1 day Before', '1 day Before'),
     ('2 day Before', '2 day Before'),
@@ -15,7 +15,7 @@ certificate_email = (
 
 class ScheduleCourse(models.Model):
     select_course = models.ForeignKey(
-        NewCourse, models.PROTECT, db_column='select_course', blank=False)
+        Course, models.PROTECT, db_column='select_course', blank=False)
     run = models.IntegerField(db_column='run', blank=False)
     PDU = models.IntegerField(db_column='PDU', blank=False)
     CET = models.IntegerField(db_column='CET', blank=False)

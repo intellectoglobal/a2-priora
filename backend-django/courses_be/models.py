@@ -12,7 +12,7 @@ day_period=(
     ('Full Day', 'Full Day'),
     ('Two Day', 'Two Day')
 )
-class NewCourse(models.Model):
+class Course(models.Model):
     course_id = models.AutoField(db_column='course_id', primary_key=True,blank=False)
     course_title = models.CharField(
         db_column='course_title', max_length=50, blank=False)
@@ -32,6 +32,6 @@ class NewCourse(models.Model):
                                default="Full Day")
     visibility = models.CharField(
         db_column='visibility', max_length=10, default="Unhide",choices=visibility)
-
+    
     class Meta:
         db_table = 'new_course'
