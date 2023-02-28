@@ -159,7 +159,7 @@ const Course = () => {
               </div>
               <div className="course-button">
                 <Ripples>
-                  <Link className="link-tab" to="/sform">
+                  <Link className="link-tab" to={`/sform/${course.coursename}`}>
                     <button type="button" className="course-btn">
                       Register
                     </button>
