@@ -1,106 +1,84 @@
 import * as React from "react";
- 
 import Box from "@mui/material/Box";
- 
 import Drawer from "@mui/material/Drawer";
+import AppBar from "@mui/material/AppBar";
+import CssBaseline from "@mui/material/CssBaseline";
+import Toolbar from "@mui/material/Toolbar";
  
 import AdminNavBar from "../AdminNavBar/AdminNavBar.tsx";
 import { Link } from "react-router-dom";
-import "./AdminSideBar.css" 
+import "./AdminSideBar.css"
 import Ripples from "react-ripples";
+const drawerWidth = "8.5vw";
 
-const drawerWidth = "10vw";
-
-
-
-interface Props {
-  window?: () => Window;
-}
-
-export default function AdminSideBar(props: Props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const drawer = (
-    <div className="sidebar-container">
-      <div className="sidebar-links">
-        <ul>
-          <Ripples>
-            <li>
-              <Link to="/" className="links">
-                About US
-              </Link>
-            </li>
-          </Ripples>
-          <Ripples>
-            <li>
-              <Link to="/course" className="links">
-                Courses
-              </Link>
-            </li>
-          </Ripples>
-          <Ripples>
-            <li>
-              <Link to="" className="links">
-                Careers
-              </Link>
-            </li>
-          </Ripples>
-          <Ripples>
-            <li>
-              <Link to="" className="links">
-                Contact
-              </Link>
-            </li>
-          </Ripples>
-          <Ripples>
-            <li>
-              <Link to="" className="links">
-                Trainers
-              </Link>
-            </li>
-          </Ripples>
-        </ul>
-      </div>
-    </div>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
+export default function ClippedDrawer() {
   return (
-    <>
-      <div>
-        <Box sx={{ display: "flex" }}>
-          <Box
-            component="nav"
-            sx={{ flexShrink: { sm: 0 }, zIndex: 0 }}
-            aria-label="mailbox folders"
-          >
-            {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-
-            <Drawer
-              variant="permanent"
-              sx={{
-                display: { xs: "none", sm: "block" },
-                "& .MuiDrawer-paper": {
-                  boxSizing: "border-box",
-                  backgroundColor: "#d9d9d9",
-                  width: drawerWidth,
-                },
-              }}
-              open
-            >
-              {drawer}
-            </Drawer>
-          </Box>
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <AppBar
+        position="fixed"
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      >
+        <AdminNavBar />
+      </AppBar>
+      <Drawer
+        variant="permanent"
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          [`& .MuiDrawer-paper`]: {
+              backgroundColor: "#d9d9d9",
+              minWidth:"100px",
+            width: drawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+      >
+        <Toolbar />
+        <Box sx={{ overflow: "auto" }}>
+          <div className="sidebar-container">
+            <div className="sidebar-links">
+              <ul>
+                <Ripples>
+                  <li>
+                    <Link to="/" className="links">
+                      About US
+                    </Link>
+                  </li>
+                </Ripples>
+                <Ripples>
+                  <li>
+                    <Link to="/course" className="links">
+                      Courses
+                    </Link>
+                  </li>
+                </Ripples>
+                <Ripples>
+                  <li>
+                    <Link to="" className="links">
+                      Careers
+                    </Link>
+                  </li>
+                </Ripples>
+                <Ripples>
+                  <li>
+                    <Link to="" className="links">
+                      Contact
+                    </Link>
+                  </li>
+                </Ripples>
+                <Ripples>
+                  <li>
+                    <Link to="" className="links">
+                      Trainers
+                    </Link>
+                  </li>
+                </Ripples>
+              </ul>
+            </div>
+          </div>
         </Box>
-      </div>
-      <AdminNavBar />
-    </>
+      </Drawer>
+    </Box>
   );
 }

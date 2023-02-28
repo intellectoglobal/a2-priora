@@ -3,17 +3,17 @@ import "./AdminNavBar.css";
 import { Link } from "react-router-dom";
 import Logo from "../../../src/Assets/logo.svg";
 import Ripples from "react-ripples";
-import AdminSideBar from "../AdminSideBar/AdminSideBar.tsx";
+ 
 
 const AdminNavBar = () => {
     return (
       <>
-        <div className="nav-container">
+        <div className="adminnav-container">
           <div className="logo">
             <img src={Logo} alt="" />
             <h1>A2PRIORA</h1>
           </div>
-          <div className="nav-links">
+          <div className="adminnav-links">
             <ul>
               <Ripples>
                 <li>
@@ -52,7 +52,6 @@ const AdminNavBar = () => {
               </Ripples>
             </ul>
           </div>
-           
         </div>
       </>
     );

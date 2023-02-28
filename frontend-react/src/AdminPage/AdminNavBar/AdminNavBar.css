@@ -1,10 +1,10 @@
-.nav-container {
+.adminnav-container {
     position: sticky;
     background: #d9d9d9;
-    box-shadow: 10px 10px 15px rgb(0 0 0 / 25%);
+    gap: 20vw;
     display: flex;
     max-height: 5vw;
-    
+
     min-height: 50px;
     align-items: center;
 }
@@ -31,20 +31,20 @@
     cursor: pointer;
 }
 
-.nav-links {
-    margin-bottom: 1vw;
+.adminnav-links {
+    margin-top: 1vw;
 }
 
-.nav-links ul {
-
-    gap: 2rem;
+.adminnav-links ul {
+    display: flex;
+    gap: 2vw;
 
 }
 
-.nav-links ul li {
+.adminnav-links ul li {
     padding: 0 1vw;
     border-width: 0vw 1px 1px 0px;
-    /* border: 1px solid black; */
+
     border-style: solid;
     border-color: #000000;
     filter: blur(0.5px);
@@ -53,12 +53,12 @@
 
 .links {
     font-family: DM Sans;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-weight: 500;
     color: #000;
     text-decoration: none;
 }
 
-.nav-links ul li:hover {
+.adminnav-links ul li:hover {
     background: #ffffff;
 }
