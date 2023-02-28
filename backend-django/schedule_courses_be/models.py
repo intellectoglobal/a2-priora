@@ -1,5 +1,5 @@
 from django.db import models
-from courses_be.models import Courses
+from courses_be.models import Course
 confirmation_email = (
     ('1 day Before', '1 day Before'),
     ('2 day Before', '2 day Before'),
