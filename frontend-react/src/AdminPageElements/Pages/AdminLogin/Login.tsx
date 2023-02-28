@@ -1,8 +1,8 @@
 import React from "react";
-import LoginPageSVG from "../../Assets/LoginPageSVG.svg";
-import Teaching from "../../Assets/Teaching.svg";
-import avatar from "../../Assets/avatar.svg";
-import logo from "../../Assets/logo.svg";
+import LoginPageSVG from "../../../Assets/LoginPageSVG.svg";
+import Teaching from "../../../Assets/Teaching.svg";
+import avatar from "../../../Assets/avatar.svg";
+import logo from "../../../Assets/logo.svg";
 import "./Login.css";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";

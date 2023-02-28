@@ -1,7 +1,7 @@
 import React from "react";
 import "./AdminNavBar.css";
 import { Link } from "react-router-dom";
-import Logo from "../../../src/Assets/logo.svg";
+import Logo from "../../../Assets/logo.svg";
 import Ripples from "react-ripples";
 
 const AdminNavBar = () => {
