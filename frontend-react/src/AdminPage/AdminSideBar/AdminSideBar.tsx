@@ -32,7 +32,8 @@ export default function AdminSideBar(props: Props) {
           <Ripples>
             <li>
               <Link to="/" className="links">
-                About US
+                              About US
+                              
               </Link>
             </li>
           </Ripples>
