@@ -1,5 +1,6 @@
 .home-container{
     margin:2rem 0 0 2rem;
+    height:75vh;
 }
 .left-img{
     position:absolute;
@@ -23,6 +24,7 @@
     font-family:DM Mono;
     font-size:0.5rem;
 }
+
 .home-button{
     position:absolute;
     top:21.5rem;
@@ -31,6 +33,7 @@
     overflow:hidden;
 }
 .home-btn{
+    cursor: pointer;
     font-family:DM Sans;
     font-size:1rem;
     font-weight:bold;
