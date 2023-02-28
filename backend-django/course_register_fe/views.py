@@ -2,8 +2,28 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from .serializers import CourseRegisterSerializer
 from .models import CourseRegister
+from courses_be.models import Course
 from rest_framework.views import APIView
- 
+
+
+class CourseMenuView(APIView):
+    serializer_class = CourseRegisterSerializer
+
+    def get(self, request, *args, **kwargs):
+        datas = Course.objects.all()
+        data = [{
+                "course_name": i.course_title,
+                "date": i.course_addded_date,
+                "time": i.duration,
+                "run": i.run,
+                "PDU": i.PDU,
+                "CET": i.CET,
+                "STU": i.STU,
+                "fee": i.fee,
+                }
+                for i in datas]
+        return Response(data)
+
 
 class CourseRegisterView(APIView):
     serializer_class = CourseRegisterSerializer
@@ -13,58 +33,42 @@ class CourseRegisterView(APIView):
         serializer = CourseRegisterSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-        return Response({"Response" : "Course is successfully registered.","data" : serializer.data})
-    
+        return Response({"Response": "Course is successfully registered.", "data": serializer.data})
+
 
 class UserSelectedCourseView(APIView):
     serializer_class = CourseRegisterSerializer
 
-    def get(self, request,id=None, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.all()
-            data = [{
-                    "Name" : i.Name,
-                    "FIN_NRIC_Passport_no": i.FIN_NRIC_Passport_no,
-                    "Selected Course" : i.Selected_Course,
-                    "Delete" : i.Delete,
-                    }
-             for i in datas]
+    def get(self, request, passport_no=None, *args, **kwargs):
+        
+        datas = CourseRegister.objects.filter(
+            FIN_NRIC_Passport_no=passport_no)
+        data = [{
+                "name": i.applicant_name,
+                "FIN_NRIC_Passport_no": i.FIN_NRIC_Passport_no,
+                "selected_course": i.selected_course.course_title,
+                }
+                for i in datas]
         return Response(data)
 
-
-    def delete(self, request, id, *args, **kwargs):
-        OrderData = CourseRegister.objects.filter(id=id)
+    def delete(self, request,  passport_no=None, *args, **kwargs):
+        OrderData = CourseRegister.objects.filter(
+            FIN_NRIC_Passport_no=passport_no)
         OrderData.delete()
         return Response({"Response": "Registered course is Successfully Deleted"})
-    
-
-class CourseMenuView(APIView):
-    serializer_class = CourseRegisterSerializer
-
-    def get(self, request, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.all()
-            data = [{
-                    "Course name" : i.Course_name,
-                    "Date" : i.Date,
-                    "Time" : i.Time,
-                    "Accrediation points" :i.Accrediation_points,
-                    "Fee" : i.Fee,
-                    }
-             for i in datas]
-        return Response(data)
 
 
 class CourseInvoiceView(APIView):
     serializer_class = CourseRegisterSerializer
 
-    def get(self, request, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.all()
-            data = [{
-                    "Course title" : i.Course_title,
-                    "Fee" : i.Fee,
-                    "Payment type" : i.Payment_tyoe,
-                    }
-             for i in datas]
+    def get(self, request,  passport_no=None, *args, **kwargs):
+      
+        datas = CourseRegister.objects.filter(
+            FIN_NRIC_Passport_no=passport_no)
+        data = [{
+                "course_title": i.selected_course.course_title,
+                "fee": i.selected_course.fee,
+                "payment_mode": i.payment.payment_mode,
+                }
+                for i in datas]
         return Response(data)
