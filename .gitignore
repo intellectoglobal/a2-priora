@@ -4,6 +4,8 @@
 /frontend-react/node_modules
 /.pnp
 .pnp.js
+*__pycache__
+/.idea
 
 # testing
 /coverage

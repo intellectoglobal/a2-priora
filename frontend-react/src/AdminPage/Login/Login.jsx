@@ -1,8 +1,8 @@
 import React from "react";
-import LoginPageSVG from "../../components/svg/LoginPageSVG.svg";
-import Teaching from "../../components/svg/Teaching.svg";
-import avatar from "../../components/svg/avatar.svg";
-import logo from "../../assects/logo.png";
+import LoginPageSVG from "../../Assets/LoginPageSVG.svg";
+import Teaching from "../../Assets/Teaching.svg";
+import avatar from "../../Assets/avatar.svg";
+import logo from "../../Assets/logo.svg";
 import "./Login.css";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
@@ -10,6 +10,8 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import Password from "@mui/icons-material/Password";
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom"
+
+
 export default function Login() {
   return (
     <div className="loginContainer">
@@ -37,19 +39,16 @@ export default function Login() {
             }}
             sx={{
               boxShadow: 10,
-              borderRadius: "100px ",
-              "&.css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root":{
-                borderRadius: "100px ",
-              }
-
+              borderRadius: "25px",
+              "& .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root ": {
+                borderRadius: "25px",
+              },
             }}
           />
           <TextField
             id="input-with-icon-textfield"
-        
-            label="Password"
-            type="password"
-        
+                      label="Password"
+                      type="password"
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
@@ -59,6 +58,10 @@ export default function Login() {
             }}
             sx={{
               boxShadow: 10,
+              borderRadius: "25px",
+              "& .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root ": {
+                borderRadius: "25px",
+              },
             }}
           />
         </div>

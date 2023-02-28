@@ -1,5 +1,5 @@
 .bgimg {
-    width: 183vh;
+    width: 96vw;
     height: 101.8vh;
     margin: -1vw;
     position: absolute;
@@ -57,7 +57,7 @@
     position: absolute;
     top: 20vw;
     left: 64vw;
-        text-shadow: 0px 0px 20px #000000ab;
+    text-shadow: 0px 0px 10px #000000ab;
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 700;
@@ -79,14 +79,16 @@
 .loginButton {
     margin-left: 5.5vw;
 }
-.forgetpass{
-        align-items: center;
-            display: flex;
-            justify-content: flex-end;
+
+.forgetpass {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
 }
-.btn-pass{
-display: flex;
-flex-direction: column;
-gap: 1vw;
-margin-top: 2vw;
+
+.btn-pass {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 2vw;
 }
