@@ -4,7 +4,7 @@
 /frontend-react/node_modules
 /.pnp
 .pnp.js
-*__pycache__
+*/__pycache__
 /.idea
 
 # testing
