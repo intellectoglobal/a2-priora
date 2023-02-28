@@ -3,9 +3,9 @@ import "antd/dist/reset.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home.tsx";
 import Course from "./Components/Course/Course.tsx";
-import Login from "./AdminPage/Login/Login.tsx";
+import Login from "./AdminPageElements/AdminLogin/Login.tsx";
 import SponserForm from "./Components/SponserForm/SponserForm.tsx";
-import AdminHome from "./AdminPage/Home/AdminHome.tsx"
+import AdminHome from "./AdminPageElements/AdminHome/AdminHome.tsx"
 
 function App() {
   return (
