@@ -10,19 +10,18 @@ class CourseMenuView(APIView):
     serializer_class = CourseRegisterSerializer
 
     def get(self, request, *args, **kwargs):
-        if request.method == 'GET':
-            datas = Course.objects.all()
-            data = [{
-                    "course_name": i.course_title,
-                    "date": i.course_addded_date,
-                    "time": i.duration,
-                    "run": i.run,
-                    "PDU": i.PDU,
-                    "CET": i.CET,
-                    "STU": i.STU,
-                    "fee": i.fee,
-                    }
-                    for i in datas]
+        datas = Course.objects.all()
+        data = [{
+                "course_name": i.course_title,
+                "date": i.course_addded_date,
+                "time": i.duration,
+                "run": i.run,
+                "PDU": i.PDU,
+                "CET": i.CET,
+                "STU": i.STU,
+                "fee": i.fee,
+                }
+                for i in datas]
         return Response(data)
 
 
@@ -41,15 +40,15 @@ class UserSelectedCourseView(APIView):
     serializer_class = CourseRegisterSerializer
 
     def get(self, request, passport_no=None, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.filter(
-                FIN_NRIC_Passport_no=passport_no)
-            data = [{
-                    "name": i.applicant_name,
-                    "FIN_NRIC_Passport_no": i.FIN_NRIC_Passport_no,
-                    "selected_course": i.selected_course.course_title,
-                    }
-                    for i in datas]
+        
+        datas = CourseRegister.objects.filter(
+            FIN_NRIC_Passport_no=passport_no)
+        data = [{
+                "name": i.applicant_name,
+                "FIN_NRIC_Passport_no": i.FIN_NRIC_Passport_no,
+                "selected_course": i.selected_course.course_title,
+                }
+                for i in datas]
         return Response(data)
 
     def delete(self, request,  passport_no=None, *args, **kwargs):
@@ -63,13 +62,13 @@ class CourseInvoiceView(APIView):
     serializer_class = CourseRegisterSerializer
 
     def get(self, request,  passport_no=None, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.filter(
-                FIN_NRIC_Passport_no=passport_no)
-            data = [{
-                    "course_title": i.selected_course.course_title,
-                    "fee": i.selected_course.fee,
-                    "payment_mode": i.payment.payment_mode,
-                    }
-                    for i in datas]
+      
+        datas = CourseRegister.objects.filter(
+            FIN_NRIC_Passport_no=passport_no)
+        data = [{
+                "course_title": i.selected_course.course_title,
+                "fee": i.selected_course.fee,
+                "payment_mode": i.payment.payment_mode,
+                }
+                for i in datas]
         return Response(data)
