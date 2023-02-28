@@ -3,11 +3,9 @@ from .views import (CourseRegisterView, CourseMenuView,
                     UserSelectedCourseView, CourseInvoiceView)
 
 urlpatterns = [
-
-    path('course_register/<int:id>', CourseMenuView.as_view()),
-    path('course_register', CourseRegisterView.as_view()),
-    path('course_register/<int:id>', UserSelectedCourseView.as_view()),
-    path('course_register/<int:id>/delete', UserSelectedCourseView.as_view()),
-    path('course_register/<int:id>', CourseInvoiceView.as_view())
-
+    path('course_menu/<int:id>', CourseMenuView.as_view()),
+    path('register', CourseRegisterView.as_view()),
+    path('selected_course/<int:id>', UserSelectedCourseView.as_view()),
+    path('selected_course/<int:id>/delete', UserSelectedCourseView.as_view()),
+    path('invoice/<int:id>', CourseInvoiceView.as_view())
 ]

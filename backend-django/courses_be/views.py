@@ -130,7 +130,7 @@ class PaymentReceiptView(APIView):
         return Response({"Response": "Receipt is Successfully Updated", "data": serializer.data})
 
 
-class ParticiapantDetailsView(APIView):
+class ParticipantDetailsView(APIView):
     serializer_class = CourseRegisterSerializer
 
     def get(self, request, *args, **kwargs):
