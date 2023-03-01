@@ -18,7 +18,7 @@ backend-django/backend/__pycache__/
 *.__pycache__
 *.migrations
 *.pyc
-
+/__pycache__/
 # production
 /build
 

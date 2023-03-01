@@ -12,6 +12,7 @@ import SponserForm from "./Components/SponserForm/SponserForm.tsx";
 import AdminHome from "./AdminPageElements/Pages/AdminHome/AdminHome.tsx"
 
 function App() {
+
   return (
     <div className="App">
     <Routes>
@@ -26,6 +27,7 @@ function App() {
       </Routes>
     </div>
   );
+
 }
 
-export default App;
+export default App;
