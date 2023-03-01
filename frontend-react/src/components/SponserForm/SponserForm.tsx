@@ -47,7 +47,11 @@ const SponserForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "The name is required.",
+                  message: "The applicant-name is required.",
+                },
+                {
+                  pattern: /^[a-zA-Z0-9]+$/,
+                  message: "Name can only include letters and numbers.",
                 },
               ]}
             >
@@ -69,7 +73,11 @@ const SponserForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "The name is required.",
+                  message: "Contact_number is required.",
+                },
+                {
+                  max: 10,
+                  message: "Contact-Number is not valid.",
                 },
               ]}
             >
@@ -91,7 +99,12 @@ const SponserForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "The name is required.",
+                  message: "The email is required.",
+                },
+                {
+                  pattern:
+                    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+                  message: "Email is not valid.",
                 },
               ]}
             >
@@ -109,12 +122,13 @@ const SponserForm = () => {
             </Form.Item>
             <Form.Item
               name="alternative_email"
-              rules={[
-                {
-                  required: true,
-                  message: "The name is required.",
-                },
-              ]}
+              // rules={[
+              //   {
+              //     required: true,
+              //     message: "The name is required.",
+              //   },
+
+              // ]}
             >
               <Input
                 placeholder="Alternative-Email:"
@@ -155,7 +169,7 @@ const SponserForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "The name is required.",
+                  message: "The FIN/NRIC/Passport_No is required.",
                 },
               ]}
             >
@@ -176,7 +190,7 @@ const SponserForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "The name is required.",
+                  message: "The Membership_type is required.",
                 },
               ]}
             >
@@ -197,7 +211,7 @@ const SponserForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "The name is required.",
+                  message: "The Membership_No is required.",
                 },
               ]}
             >
@@ -218,7 +232,7 @@ const SponserForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "The name is required.",
+                  message: "The Postal_Code is required.",
                 },
               ]}
             >
@@ -240,7 +254,7 @@ const SponserForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "The name is required.",
+                  message: "The Address is required.",
                 },
               ]}
             >
@@ -265,15 +279,11 @@ const SponserForm = () => {
                 </Link>
               </Ripples>
               <Ripples>
-                <Link to="" className="link-tab">
-                  <button
-                    onClick={handleSubmit}
-                    type="submit"
-                    className="sform-btn"
-                  >
+                <button onClick={handleSubmit} className="sform-btn">
+                  <Link to="/coursetable" className="link-tab">
                     Next
-                  </button>
-                </Link>
+                  </Link>
+                </button>
               </Ripples>
             </div>
           </Form>

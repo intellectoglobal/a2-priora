@@ -13,17 +13,17 @@ class ListOfCourseView(APIView):
     serializer_class = CourseSerializer
 
     def get(self, request, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.all()
-            data = [{
-                    "date": i.selected_course.course_addded_date,
-                    "course_title": i.selected_course.course_title,
-                    "total_no_of_participants": "",
-                    "run": i.selected_course.run,
-                    "scheduled_status": "",
-                    "view_status": i.selected_course.visibility,
-                    }
-                    for i in datas]
+
+        datas = CourseRegister.objects.all()
+        data = [{
+                "date": i.selected_course.course_addded_date,
+                "course_title": i.selected_course.course_title,
+                "total_no_of_participants": "",
+                "run": i.selected_course.run,
+                "scheduled_status": "",
+                "view_status": i.selected_course.visibility,
+                }
+                for i in datas]
         return Response(data)
 
 
@@ -42,21 +42,21 @@ class CertificateStatus(APIView):
     serializer_class = CourseRegisterSerializer
 
     def get(self, request, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.all()
-            data = [{
-                    "course_title": i.selected_course.course_title,
-                    "run": i.selected_course.run,
-                    "date": i.selected_course.course_addded_date,
-                    "reg_date": "",
-                    "aame": i.applicant_name,
-                    "FIN_no": i.FIN_NRIC_Passport_no,
-                    "contact_no": i.contact_no,
-                    "email": i.email,
-                    "payment_method": i.payment.payment_mode,
-                    "cert_status": i.payment.payment_status,
-                    }
-                    for i in datas]
+
+        datas = CourseRegister.objects.all()
+        data = [{
+                "course_title": i.selected_course.course_title,
+                "run": i.selected_course.run,
+                "date": i.selected_course.course_addded_date,
+                "reg_date": "",
+                "aame": i.applicant_name,
+                "FIN_no": i.FIN_NRIC_Passport_no,
+                "contact_no": i.contact_no,
+                "email": i.email,
+                "payment_method": i.payment.payment_mode,
+                "cert_status": i.payment.payment_status,
+                }
+                for i in datas]
         return Response(data)
 
     def put(self, request, id, *args, **kwargs):
@@ -72,19 +72,19 @@ class PaymentView(APIView):
     serializer_class = CourseSerializer
 
     def get(self, request, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.all()
-            data = [{
-                    "date": i.selected_course.course_addded_date,
-                    "course": i.selected_course.course_title,
-                    "name": i.applicant_name,
-                    "FIN_no": i.FIN_NRIC_Passport_no,
-                    "email": i.email,
-                    "payment_method": i.payment.payment_mode,
-                    "pay_status": i.payment.payment_status,
-                    "sent_status": i.payment.payment_status,
-                    }
-                    for i in datas]
+
+        datas = CourseRegister.objects.all()
+        data = [{
+                "date": i.selected_course.course_addded_date,
+                "course": i.selected_course.course_title,
+                "name": i.applicant_name,
+                "FIN_no": i.FIN_NRIC_Passport_no,
+                "email": i.email,
+                "payment_method": i.payment.payment_mode,
+                "pay_status": i.payment.payment_status,
+                "sent_status": i.payment.payment_status,
+                }
+                for i in datas]
         return Response(data)
 
     def put(self, request, id, *args, **kwargs):
@@ -101,23 +101,23 @@ class PaymentReceiptView(APIView):
     serializer_class = CourseRegisterSerializer
 
     def get(self, request, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.all()
-            data = [{
-                    "course_title": i.selected_course.course_title,
-                    "run": i.selected_course.run,
-                    "date": i.selected_course.course_addded_date,
-                    "reg_date": "",
-                    "name": i.applicant_name,
-                    "FIN_no": i.FIN_NRIC_Passport_no,
-                    "contact_no": i.contact_no,
-                    "email": i.email,
-                    "payment_mode": i.payment.payment_mode,
-                    "status": i.payment.payment_status,
-                    "invoice": i.payment.payment_receipt,
-                    "receipt": i.payment.payment_receipt,
-                    }
-                    for i in datas]
+
+        datas = CourseRegister.objects.all()
+        data = [{
+                "course_title": i.selected_course.course_title,
+                "run": i.selected_course.run,
+                "date": i.selected_course.course_addded_date,
+                "reg_date": "",
+                "name": i.applicant_name,
+                "FIN_no": i.FIN_NRIC_Passport_no,
+                "contact_no": i.contact_no,
+                "email": i.email,
+                "payment_mode": i.payment.payment_mode,
+                "status": i.payment.payment_status,
+                "invoice": i.payment.payment_receipt,
+                "receipt": i.payment.payment_receipt,
+                }
+                for i in datas]
         return Response(data)
 
     def put(self, request, id, *args, **kwargs):
@@ -130,26 +130,26 @@ class PaymentReceiptView(APIView):
         return Response({"Response": "Receipt is Successfully Updated", "data": serializer.data})
 
 
-class ParticiapantDetailsView(APIView):
+class ParticipantDetailsView(APIView):
     serializer_class = CourseRegisterSerializer
 
     def get(self, request, *args, **kwargs):
-        if request.method == 'GET':
-            datas = CourseRegister.objects.all()
-            data = [{
-                    "course_title": i.selected_course.course_title,
-                    "run": i.selected_course.run,
-                    "date": i.selected_course.course_addded_date,
-                    "reg_date": "",
-                    "name": i.applicant_name,
-                    "FIN_no": i.FIN_NRIC_Passport_no,
-                    "contact_no": i.contact_no,
-                    "email": i.email,
-                    "payment_method": i.payment.payment_mode,
-                    "payment_status": i.payment.payment_status,
-                    "certificate": i.selected_course.certificate_code,
-                    }
-                    for i in datas]
+
+        datas = CourseRegister.objects.all()
+        data = [{
+                "course_title": i.selected_course.course_title,
+                "run": i.selected_course.run,
+                "date": i.selected_course.course_addded_date,
+                "reg_date": "",
+                "name": i.applicant_name,
+                "FIN_no": i.FIN_NRIC_Passport_no,
+                "contact_no": i.contact_no,
+                "email": i.email,
+                "payment_method": i.payment.payment_mode,
+                "payment_status": i.payment.payment_status,
+                "certificate": i.selected_course.certificate_code,
+                }
+                for i in datas]
         return Response(data)
 
     def put(self, request, id, *args, **kwargs):
