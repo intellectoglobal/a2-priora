@@ -1,77 +1,69 @@
-.cash-container{
-    border:2px solid black;
-    box-sizing: border-box;
-    margin:3rem;
-    height:75vh;
+.cash-container {
+  border: 2px solid black;
+  box-sizing: border-box;
+  margin: 3rem;
+  height: 75vh;
 }
-.cash-content{
-    display:flex;
-    justify-content:space-between;
-    margin:3rem 2rem;
+.cash-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 2rem;
 }
-.cash-content h1{
-    background: #ececec;
-    padding:1rem;
-    font-family:DM Sans;
-    margin-top:0.5rem;
-    font-weight:bold;
-}
-.cash-container1{
-    display:flex;
-    margin:2rem;
-}
-.cash-content1{
-    background: #ececec;
-    padding:1rem;
-    width:50%;
-}
-.cash-content1 h2{
-  font-size:1.2rem;
+.cash-content h1 {
+  background: #ececec;
+  padding: 1rem;
+  font-family: DM Sans;
+  margin-top: 0.5rem;
   font-weight: bold;
-  font-family:DM Sans;
-  margin-bottom:1rem;
 }
-.cash-content1 h4{
-    font-size:1rem;
-    font-weight:bold;
-    font-family:DM Sans;
+.cash-container1 {
+  display: flex;
+  margin: 2rem;
 }
-.cash-content2{
-    background:#ececec;
-    margin-left:4rem;
+.cash-content1 {
+  background: #ececec;
+  padding: 1rem;
+  width: 50%;
 }
-.cash-content2 p{
-    font-size:1.5rem;
-    font-weight:bold;
-    font-family:DM Sans;
-    text-align: center;
-    margin:7% 2rem;
+.cash-content1 h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: DM Sans;
+  margin-bottom: 1rem;
 }
-.button-Backword{
- float: right;  
- margin-right: 1.5vw; 
+.cash-content1 h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: DM Sans;
 }
-.Cashpopup{
-background-color: antiquewhite;
-font-size:1.5rem;
-    font-weight:bold;
-    font-family:DM Sans;
-    text-align: center;
-    margin:7% 2rem;
+.cash-content2 {
+  background: #ececec;
+  margin-left: 4rem;
 }
-.Cashpopup1{
-    background-color: antiquewhite;
-    font-size:1.5rem;
-        font-weight:bold;
-        font-family:DM Sans;
-        text-align: center;
-        margin:7% 2rem;
-    }
-    .Cashpopup2{
-        background-color: antiquewhite;
-        font-size:1.5rem;
-            font-weight:bold;
-            font-family:DM Sans;
-            text-align: center;
-            margin:7% 2rem;
-        }
+.cash-content2 p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: DM Sans;
+  text-align: center;
+  margin: 7% 2rem;
+}
+.button-Backword {
+  float: right;
+  margin-right: 1.5vw;
+}
+
+.cashpopup-container{
+    background: #ECECEC;
+    position:absolute;
+    width:50%;
+    top:30%;
+    left:25%;
+}
+
+.Cashpopup h3{
+  background:#ffffff;
+  width:50%;
+  border-radius:3rem;
+  padding:0.5rem 0rem;
+  text-align: center;
+}
