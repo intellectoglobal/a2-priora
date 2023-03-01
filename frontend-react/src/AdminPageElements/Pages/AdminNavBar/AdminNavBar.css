@@ -49,12 +49,12 @@
   border-radius: 100px;
 }
 
-.adminlinks {
-  font-family: DM Sans;
-  font-size: 1.2vw;
-  font-weight: 500;
-  color: #000;
-  text-decoration: none;
+.links {
+    font-family: DM Sans;
+    font-size: 1.1vw;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
 }
 
 .adminnav-links ul li:hover {
