@@ -5,12 +5,12 @@ import Home from "./Components/Home/Home.tsx";
 import Course from "./Components/Course/Course.tsx";
 import Login from "../src/AdminPage/Login/Login";
 import SponserForm from "./Components/SponserForm/SponserForm.tsx";
-
+import CashNet from "./Components/CashNet/CashNet.tsx"
 function App() {
   return (
     <div className="App">
     <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<CashNet />} />
         <Route path="admin" element={<Login />} />
         {/* <Route path="/about" element={<About/>}/> */}
         {/* <Route path="/careers" element={<Careers/>}/> */}
