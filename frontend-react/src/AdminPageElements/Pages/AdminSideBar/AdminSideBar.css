@@ -17,6 +17,17 @@
 
 .sidebar-links ul li {
     padding: 0 1vw;
+
+
+    display: flex;
+
+
+    width: 8vw;
+    justify-content: space-evenly;
+}
+
+.sidebar-links ul li:active {
+    padding: 0 1vw;
     border-width: 0vw 1px 1px 0px;
     border-style: solid;
     border-color: #000000;
@@ -29,7 +40,7 @@
 
 .links {
     font-family: DM Sans;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     font-weight: 500;
     color: #000;
     text-decoration: none;
@@ -45,4 +56,6 @@
 
 .sidebar-links ul li:hover {
     background: #ffffff;
+   
+     
 }

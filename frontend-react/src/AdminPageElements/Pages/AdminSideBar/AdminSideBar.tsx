@@ -54,12 +54,10 @@ export default function ClippedDrawer() {
                   }}
                 >
                   <Ripples>
-                    <li>
-                      <Link to="" className="links">
-                        Home
-                      </Link>
-                    </li>
-                  </Ripples>{" "}
+                    <Link to="/adminHome" className="links">
+                      <li>Home</li>
+                    </Link>
+                  </Ripples>
                 </div>
                 <div
                   style={{
@@ -69,12 +67,10 @@ export default function ClippedDrawer() {
                   }}
                 >
                   <Ripples>
-                    <li>
-                      <Link to="/course" className="links">
-                        Courses
-                      </Link>
-                    </li>
-                  </Ripples>{" "}
+                    <Link to="/adminCourse" className="links">
+                      <li>Courses</li>
+                    </Link>
+                  </Ripples>
                 </div>
                 <div
                   style={{
@@ -84,12 +80,10 @@ export default function ClippedDrawer() {
                   }}
                 >
                   <Ripples>
-                    <li>
-                      <Link to="" className="links">
-                        Certificate
-                      </Link>
-                    </li>
-                  </Ripples>{" "}
+                    <Link to="/adminCertificate" className="links">
+                      <li>Certificate</li>
+                    </Link>
+                  </Ripples>
                 </div>
                 <div
                   style={{
@@ -99,12 +93,10 @@ export default function ClippedDrawer() {
                   }}
                 >
                   <Ripples>
-                    <li>
-                      <Link to="" className="links">
-                        Payment
-                      </Link>
-                    </li>
-                  </Ripples>{" "}
+                    <Link to="" className="links">
+                      <li>Payment</li>
+                    </Link>
+                  </Ripples>
                 </div>
                 <div
                   style={{
@@ -114,11 +106,9 @@ export default function ClippedDrawer() {
                   }}
                 >
                   <Ripples>
-                    <li>
-                      <Link to="" className="links-p">
-                        Participation Details
-                      </Link>
-                    </li>
+                    <Link to="" className="links-p">
+                      <li>Participation Details</li>
+                    </Link>
                   </Ripples>
                 </div>
               </ul>
