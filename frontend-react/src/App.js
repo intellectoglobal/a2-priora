@@ -13,6 +13,7 @@ import AdminCourses from "./AdminPageElements/Pages/AdminCourses/AdminCourses.ts
 import AdminAddCourses from "./AdminPageElements/Pages/AdminAddCourses/AdminAddCourses.tsx";
 import AdminCertificates from "./AdminPageElements/Pages/AdminCertificates/AdminCertificates.tsx";
 
+
 function App() {
 
   return (
