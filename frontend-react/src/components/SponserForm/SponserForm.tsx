@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./SponserForm.css";
 import { Form, Input, Radio } from "antd";
 import Ripples from "react-ripples";
@@ -14,6 +14,9 @@ const SponserForm = () => {
   const { values, handleChange, handleSubmit } = Sform();
   const user = useSelector((state) => state.user.value);
   console.log(user);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <Navbar />

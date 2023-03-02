@@ -6,10 +6,15 @@ import Course from "./Components/Course/Course.tsx";
 import CourseTable from "./Components/CourseTable/CourseTable.tsx";
 import Login from "./AdminPageElements/Pages/AdminLogin/Login.tsx";
 import SponserForm from "./Components/SponserForm/SponserForm.tsx";
+
+
+import Payments from "./Components/Payments/Payments.tsx";
+
 import AdminHome from "./AdminPageElements/Pages/AdminHome/AdminHome.tsx"
 import AdminCourses from "./AdminPageElements/Pages/AdminCourses/AdminCourses.tsx";
 import AdminAddCourses from "./AdminPageElements/Pages/AdminAddCourses/AdminAddCourses.tsx";
 import AdminCertificates from "./AdminPageElements/Pages/AdminCertificates/AdminCertificates.tsx";
+
 
 function App() {
 
@@ -25,8 +30,11 @@ function App() {
         {/* <Route path="/about" element={<About/>}/> */}
         {/* <Route path="/careers" element={<Careers/>}/> */}
         <Route path="/course" element={<Course />} />
-        <Route path="/sform/:course" element={<SponserForm />} />
-        <Route path="/coursetable" element={<CourseTable />} />
+
+        <Route path="/sform/:course" element={<SponserForm/>} />
+        <Route path="/coursetable" element={<CourseTable/>} />
+        <Route path="/payments" element={<Payments/>} />
+
       </Routes>
     </div>
   );

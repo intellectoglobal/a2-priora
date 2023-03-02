@@ -117,7 +117,7 @@ const Course = () => {
             <div className="search-bar">
               <Search
                 style={{ width: "27rem", left: "10rem" }}
-                placeholder="Search Course"
+                placeholder="Search Your Course"
                 enterButton
                 value={search}
                 onChange={(e) => {
@@ -134,7 +134,7 @@ const Course = () => {
         <div className="course-cards">
           {datas.map((course) => (
             <div className="course-content">
-              <img src={course.courseimg} alt="" />
+              <img className="course-img" src={course.courseimg} alt="" />
               <div className="course-matter">
                 <h1>{course.coursename}</h1>
                 <p>{course.subject}</p>
