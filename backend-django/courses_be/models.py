@@ -38,3 +38,5 @@ class Course(models.Model):
 
     class Meta:
         db_table = 'new_course'
+
+  
