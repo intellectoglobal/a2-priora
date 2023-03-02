@@ -50,21 +50,13 @@
     border-radius: 100px;
 }
 
-<<<<<<< HEAD
-.links {
-=======
 
 .adminlinks {
->>>>>>> 6de1c8b (minor updates)
     font-family: DM Sans;
     font-size: 1.1vw;
     font-weight: 500;
     color: #000;
     text-decoration: none;
-<<<<<<< HEAD
-=======
-
->>>>>>> 6de1c8b (minor updates)
 }
 
 .adminnav-links ul li:hover {
