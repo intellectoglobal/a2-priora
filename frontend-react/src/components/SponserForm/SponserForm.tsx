@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./SponserForm.css";
 import { Form, Input, Radio } from "antd";
 import Ripples from "react-ripples";
@@ -15,8 +15,8 @@ const SponserForm = () => {
   const user = useSelector((state) => state.user.value);
   console.log(user);
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />
@@ -274,20 +274,34 @@ const SponserForm = () => {
               />
             </Form.Item>
             <div className="sform-button">
-              <Ripples>
-                <Link to="/course" className="link-tab">
-                  <button type="button" className="sform-btn">
-                    Cancel
-                  </button>
-                </Link>
-              </Ripples>
-              <Ripples>
-                <button onClick={handleSubmit} className="sform-btn">
-                  <Link to="/coursetable" className="link-tab">
-                    Next
+              <div
+                style={{
+                  display: "inline-flex",
+                  borderRadius: 25,
+                  overflow: "hidden",
+                }}
+              >
+                <Ripples>
+                  <Link to="/course" className="link-tab">
+                    <button type="button" className="sform-btn">
+                      Cancel
+                    </button>
                   </Link>
-                </button>
-              </Ripples>
+                </Ripples>
+              </div>
+              <div
+                style={{
+                  display: "inline-flex",
+                  borderRadius: 25,
+                  overflow: "hidden",
+                }}
+              >
+                <Ripples>
+                    <button onClick={handleSubmit} className="sform-btn">
+                      Next
+                    </button>
+                </Ripples>
+              </div>
             </div>
           </Form>
         </div>

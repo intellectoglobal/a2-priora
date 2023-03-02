@@ -12,26 +12,58 @@ const Navbar = () => {
       </div>
       <div className="nav-links">
         <ul>
-          <Ripples>
-            <Link to="/" className="links">
-              <li>Home</li>
-            </Link>
-          </Ripples>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
+            <Ripples>
+              <Link to="/" className="links">
+                <li>Home</li>
+              </Link>
+            </Ripples>
+          </div>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
           <Ripples>
             <Link to="/course" className="links">
               <li>Course</li>
             </Link>
           </Ripples>
+          </div>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
           <Ripples>
             <Link to="" className="links">
               <li>About</li>
             </Link>
           </Ripples>
+          </div>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
           <Ripples>
             <Link to="" className="links">
               <li>Career</li>
             </Link>
           </Ripples>
+          </div>
         </ul>
       </div>
     </div>
