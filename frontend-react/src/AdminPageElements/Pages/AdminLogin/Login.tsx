@@ -9,16 +9,21 @@ import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import Password from "@mui/icons-material/Password";
 import Button from "@mui/material/Button";
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 
 export default function Login() {
+    const history=useNavigate()
+    const handleSubmit = () => {
+    history("/adminHome")
+}
+
   return (
     <div className="loginContainer">
       <div>
         <img className="bgimg" alt="bg" src={LoginPageSVG} />
         <div className="titleContainer">
-          <img className="logo" alt="logo" src={logo} />
+          <img className="-logo" alt="logo" src={logo} />
           <h1 className="title">A2 PRIORA</h1>
         </div>
         <img className="bannerimg" alt="banner" src={Teaching} />
@@ -47,8 +52,8 @@ export default function Login() {
           />
           <TextField
             id="input-with-icon-textfield"
-                      label="Password"
-                      type="password"
+            label="Password"
+            type="password"
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
@@ -71,7 +76,8 @@ export default function Login() {
           </a>
           <div className="loginButton">
             <Button
-              variant="contained"
+                          variant="contained"
+                          onClick={handleSubmit}
               sx={{
                 backgroundColor: "#FA80DB",
                 borderRadius: "200px",

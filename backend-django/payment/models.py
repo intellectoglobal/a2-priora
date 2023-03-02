@@ -26,3 +26,5 @@ class Payment(models.Model):
 
     class Meta:
         db_table = 'payment'
+    def __str__(self):
+        return self.payment_mode

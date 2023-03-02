@@ -4,12 +4,6 @@
 /frontend-react/node_modules
 /.pnp
 .pnp.js
-backend-django/api/__pycache__/
-backend-django/backend/__pycache__/
-/backend-django/course_register_fe/__pycache__/
-/backend-django/courses_be/__pycache__/
-/backend-django/schedule_courses_be/__pycache__/
-/backend-django/payment/__pycache__/
 */migrations
 /.idea
 
@@ -18,7 +12,7 @@ backend-django/backend/__pycache__/
 *.__pycache__
 *.migrations
 *.pyc
-
+/__pycache__/
 # production
 /build
 

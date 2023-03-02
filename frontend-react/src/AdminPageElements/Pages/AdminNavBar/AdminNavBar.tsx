@@ -8,7 +8,7 @@ const AdminNavBar = () => {
   return (
     <>
       <div className="adminnav-container">
-        <div className="logo">
+        <div className="adminlogo">
           <img src={Logo} alt="" />
           <h1>A2PRIORA</h1>
         </div>
@@ -22,11 +22,12 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
+
+                  <Link to="/" className="adminlinks">
                 <li>
-                  <Link to="/" className="links">
                     About US
-                  </Link>
                 </li>
+                  </Link>
               </Ripples>
             </div>
             <div
@@ -37,11 +38,13 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
+h
+                  <Link to="/course" className="adminlinks">
                 <li>
-                  <Link to="/course" className="links">
+
                     Courses
-                  </Link>
                 </li>
+                  </Link>
               </Ripples>
             </div>
             <div
@@ -52,11 +55,13 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
+
+                  <Link to="" className="adminlinks">
                 <li>
-                  <Link to="" className="links">
+
                     Careers
-                  </Link>
                 </li>
+                  </Link>
               </Ripples>
             </div>
             <div
@@ -67,11 +72,12 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
+                  <Link to="" className="adminlinks">
                 <li>
-                  <Link to="" className="links">
+
                     Contact
-                  </Link>
                 </li>
+                  </Link>
               </Ripples>
             </div>
             <div
@@ -82,11 +88,13 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
+
+                  <Link to="" className="adminlinks">
                 <li>
-                  <Link to="" className="links">
+
                     Trainers
-                  </Link>
                 </li>
+                  </Link>
               </Ripples>
             </div>
           </ul>
