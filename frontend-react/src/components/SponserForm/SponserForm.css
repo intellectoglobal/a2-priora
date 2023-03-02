@@ -27,7 +27,7 @@
 }
 .ant-form-item .ant-form-item-label >label{
   font-size:1.5rem;
-  margin:-0.2rem 0 1.5rem 0;
+  margin:-0.1rem 0 1.5rem 0;
   font-family:Roboto !important;
 }
 .ant-input::placeholder{

@@ -8,7 +8,7 @@ const AdminNavBar = () => {
   return (
     <>
       <div className="adminnav-container">
-        <div className="logo">
+        <div className="adminlogo">
           <img src={Logo} alt="" />
           <h1>A2PRIORA</h1>
         </div>
@@ -23,7 +23,7 @@ const AdminNavBar = () => {
             >
               <Ripples>
                 <li>
-                  <Link to="/" className="links">
+                  <Link to="/" className="adminlinks">
                     About US
                   </Link>
                 </li>
@@ -38,7 +38,7 @@ const AdminNavBar = () => {
             >
               <Ripples>
                 <li>
-                  <Link to="/course" className="links">
+                  <Link to="/course" className="adminlinks">
                     Courses
                   </Link>
                 </li>
@@ -53,7 +53,7 @@ const AdminNavBar = () => {
             >
               <Ripples>
                 <li>
-                  <Link to="" className="links">
+                  <Link to="" className="adminlinks">
                     Careers
                   </Link>
                 </li>
@@ -68,7 +68,7 @@ const AdminNavBar = () => {
             >
               <Ripples>
                 <li>
-                  <Link to="" className="links">
+                  <Link to="" className="adminlinks">
                     Contact
                   </Link>
                 </li>
@@ -83,7 +83,7 @@ const AdminNavBar = () => {
             >
               <Ripples>
                 <li>
-                  <Link to="" className="links">
+                  <Link to="" className="adminlinks">
                     Trainers
                   </Link>
                 </li>
