@@ -11,7 +11,10 @@ certificate_email = (
     ('3 day After', '3 day After'),
     ('Immediate After Attendance', 'Immediate After Attendance')
 )
-
+visibility = (
+    ('Hide', 'Hide'),
+    ('Unhide', 'Unhide')
+)
 
 class ScheduleCourse(models.Model):
     select_course = models.ForeignKey(
@@ -35,7 +38,7 @@ class ScheduleCourse(models.Model):
     certificate_email = models.CharField(
         db_column='certificate_email', max_length=30, choices=certificate_email, blank=False, null=False)
     visibility = models.CharField(
-        db_column='visibility', max_length=10, default="UnHide", blank=False, null=False)
+        db_column='visibility', max_length=10, choices=visibility, default="UnHide", blank=False, null=False)
 
     class Meta:
         db_table = 'schedule_course'
