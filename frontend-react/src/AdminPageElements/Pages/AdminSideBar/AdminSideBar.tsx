@@ -93,7 +93,7 @@ export default function ClippedDrawer() {
                   }}
                 >
                   <Ripples>
-                    <Link to="" className="links">
+                    <Link to="/adminPayment" className="links">
                       <li>Payment</li>
                     </Link>
                   </Ripples>

@@ -175,50 +175,48 @@ const AdminCertificates = () => {
       <AdminSideBar />
       <div className="table-container">
         <div className="table">
-           
-            <ul>
-              <TextField
-                id="outlined-selet-currency"
-                select
-                label="Select Course"
-                sx={{
-                  width: "15vw",
-                }}
-              />
-              <TextField
-                id="outlined-selet-currency"
-                select
-                label="Run"
-                sx={{
-                  width: "5vw",
-                }}
-              ></TextField>
+          <ul>
+            <TextField
+              id="outlined-selet-currency"
+              select
+              label="Select Course"
+              sx={{
+                width: "15vw",
+              }}
+            />
+            <TextField
+              id="outlined-selet-currency"
+              select
+              label="Run"
+              sx={{
+                width: "5vw",
+              }}
+            ></TextField>
 
-              <TextField
-                id="outlined"
-                label="Start Date"
-                sx={{
-                  width: "15vw",
-                }}
-              />
-              <div
-                style={{
-                  display: "inline-flex",
-                  borderRadius: "100px",
-                  overflow: "hidden",
-                }}
-              >
-                <Ripples>
-                  <Link to="" className="link">
-                    <li>Go to Payment</li>
-                  </Link>
-                </Ripples>
-              </div>
-            </ul>
-          
+            <TextField
+              id="outlined"
+              label="Start Date"
+              sx={{
+                width: "15vw",
+              }}
+            />
+            
+           
+                <Link to="" className="link">
+                  <li>Go to Payment</li>
+                </Link>
+             
+             
+          </ul>
+
           <div className="tabldfve-btn-links "></div>
           <ThemeProvider theme={getMuiTheme()}>
-            <MUIDataTable data={data} editMode="row" columns={columns} options={options} />
+            <MUIDataTable
+              data={data}
+              editMode="row"
+              columns={columns}
+              options={options}
+            />
           </ThemeProvider>
         </div>
       </div>
