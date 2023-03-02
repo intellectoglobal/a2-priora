@@ -34,6 +34,7 @@ function CashPopup() {
                   borderRadius: "5px",
                   border: "1px solid #000000",
                   width: "12rem",
+                  height:'1rem',
                 }}
               />
             </Form.Item>
@@ -41,12 +42,23 @@ function CashPopup() {
       <div className='Cashpopup2'>
       <h3>Preview Area:</h3>
       </div>
-      <div className="button-Backword">
+     
+          <div className="cashpopup-buttons">
           <Ripples>
-            <Link to="" className="link-tab-for-popup">
-              <button type="submit" className="uploadform-btn">
-                select
+            <Link to="" className="link-tab">
+              <button type="button" className="cash-btn">
+                Select
               </button>
+            </Link>
+          </Ripples>
+          <Ripples>
+            <Link to="" className="link-tab">
+              <button className="cash-btn">Delete</button>
+            </Link>
+          </Ripples>
+          <Ripples>
+            <Link to="" className="link-tab">
+              <button className="cash-btn">Done</button>
             </Link>
           </Ripples>
           </div>

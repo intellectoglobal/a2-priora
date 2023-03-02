@@ -34,10 +34,10 @@ function CashNet() {
           </div>
         </div>
 
-        <div className="button-Backword">
+        <div className="cash-buttons">
           <Ripples>
             <Link to="" className="link-tab">
-              <button type="submit" className="sform-btn">
+              <button type="submit" className="cash-btn">
                 Back
               </button>
             </Link>
@@ -45,7 +45,7 @@ function CashNet() {
 
           <Ripples>
             <Link to="" className="link-tab">
-              <button type="submit" className="sform-btn">
+              <button type="submit" className="cash-btn">
                 Cancel
               </button>
             </Link>
@@ -53,7 +53,7 @@ function CashNet() {
 
           <Ripples>
             <Link to="" className="link-tab">
-              <button type="submit" className="sform-btn">
+              <button type="submit" className="cash-btn">
                 Upload
               </button>
             </Link>

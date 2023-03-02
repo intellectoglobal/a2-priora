@@ -6,6 +6,7 @@ import Course from "./Components/Course/Course.tsx";
 import CourseTable from "./Components/CourseTable/CourseTable.tsx";
 import Login from "./AdminPageElements/Pages/AdminLogin/Login.tsx";
 import SponserForm from "./Components/SponserForm/SponserForm.tsx";
+import CashNet from "./Components/CashNet/CashNet.tsx"
 import Payments from "./Components/Payments/Payments.tsx";
 import AdminHome from "./AdminPageElements/Pages/AdminHome/AdminHome.tsx"
 import AdminPayment from "./AdminPageElements/Pages/AdminPayment/AdminPayment.tsx";
