@@ -6,6 +6,7 @@ import Course from "./Components/Course/Course.tsx";
 import CourseTable from "./Components/CourseTable/CourseTable.tsx";
 import Login from "./AdminPageElements/Pages/AdminLogin/Login.tsx";
 import SponserForm from "./Components/SponserForm/SponserForm.tsx";
+import CashNet from "./Components/CashNet/CashNet.tsx"
 import Payments from "./Components/Payments/Payments.tsx";
 import AdminHome from "./AdminPageElements/Pages/AdminHome/AdminHome.tsx";
 import AdminPayment from "./AdminPageElements/Pages/AdminPayment/AdminPayment.tsx";
@@ -14,6 +15,7 @@ import AdminAddCourses from "./AdminPageElements/Pages/AdminAddCourses/AdminAddC
 import AdminPaymentGoto from "./AdminPageElements/Pages/AdminPayment/AdminPaymentGoto.tsx";
 import AdminCertificates from "./AdminPageElements/Pages/AdminCertificates/AdminCertificates.tsx";
 import AdminParticipationDetails from "./AdminPageElements/Pages/AdminParticipationDetails/AdminParticipationDetails.tsx";
+ 
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
         <Route path="/adminParticipationDetails" element={<AdminParticipationDetails />} />
         {/* <Route path="/about" element={<About/>}/> */}
         {/* <Route path="/careers" element={<Careers/>}/> */}
+        <Route path="/cashnet" element={<CashNet />} />
         <Route path="/course" element={<Course />} />
 
         <Route path="/sform/:course" element={<SponserForm />} />
