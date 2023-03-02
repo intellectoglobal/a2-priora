@@ -7,15 +7,15 @@ import CourseTable from "./Components/CourseTable/CourseTable.tsx";
 import Login from "./AdminPageElements/Pages/AdminLogin/Login.tsx";
 import SponserForm from "./Components/SponserForm/SponserForm.tsx";
 import Payments from "./Components/Payments/Payments.tsx";
-import AdminHome from "./AdminPageElements/Pages/AdminHome/AdminHome.tsx"
+import AdminHome from "./AdminPageElements/Pages/AdminHome/AdminHome.tsx";
 import AdminPayment from "./AdminPageElements/Pages/AdminPayment/AdminPayment.tsx";
 import AdminCourses from "./AdminPageElements/Pages/AdminCourses/AdminCourses.tsx";
 import AdminAddCourses from "./AdminPageElements/Pages/AdminAddCourses/AdminAddCourses.tsx";
+import AdminPaymentGoto from "./AdminPageElements/Pages/AdminPayment/AdminPaymentGoto.tsx";
 import AdminCertificates from "./AdminPageElements/Pages/AdminCertificates/AdminCertificates.tsx";
-
+import AdminParticipationDetails from "./AdminPageElements/Pages/AdminParticipationDetails/AdminParticipationDetails.tsx";
 
 function App() {
-
   return (
     <div className="App">
       <Routes>
@@ -24,8 +24,10 @@ function App() {
         <Route path="/adminHome" element={<AdminHome />} />
         <Route path="/adminCourse" element={<AdminCourses />} />
         <Route path="/adminPayment" element={<AdminPayment />} />
+        <Route path="/adminPaymentGoto" element={<AdminPaymentGoto />} />
         <Route path="/adminAddCourse" element={<AdminAddCourses />} />
         <Route path="/adminCertificate" element={<AdminCertificates />} />
+        <Route path="/adminParticipationDetails" element={<AdminParticipationDetails />} />
         {/* <Route path="/about" element={<About/>}/> */}
         {/* <Route path="/careers" element={<Careers/>}/> */}
         <Route path="/course" element={<Course />} />
@@ -36,7 +38,6 @@ function App() {
       </Routes>
     </div>
   );
-
 }
 
 export default App;

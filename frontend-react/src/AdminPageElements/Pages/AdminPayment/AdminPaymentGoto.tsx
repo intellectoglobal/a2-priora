@@ -2,12 +2,12 @@ import React from "react";
 import AdminSideBar from "../AdminSideBar/AdminSideBar.tsx";
 import MUIDataTable from "mui-datatables";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import "./AdminCertificates.css";
+import "./AdminPaymentGoto.css";
 import Ripples from "react-ripples";
 import { Link } from "react-router-dom";
 import { TextField } from "@mui/material";
 
-const AdminCertificates = () => {
+const AdminPaymentGoto = () => {
   const getMuiTheme = () =>
     createTheme({
       components: {
@@ -46,7 +46,9 @@ const AdminCertificates = () => {
     "Contact No.",
     "Email",
     "Payment Method",
-    "Cert Status",
+    "Status",
+    "Invoice",
+    "Receipt",
   ];
 
   const data = [
@@ -58,7 +60,9 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "PayPal",
-      "Payment Pending",
+      "Pending",
+      "Not yet",
+      "Not yet",
     ],
     [
       2,
@@ -68,6 +72,8 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "Bank Transfer",
+      "Paid",
+      "Sent",
       "Sent",
     ],
     [
@@ -78,7 +84,9 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "PayCashPal",
-      "Payment Pending",
+      "Pending",
+      "Not yet",
+      "Not yet",
     ],
     [
       4,
@@ -88,7 +96,9 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "PayPal",
-      "Payment Pending",
+      "Pending",
+      "Not yet",
+      "Not yet",
     ],
     [
       5,
@@ -98,7 +108,9 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "Bank Transfer",
-      "Payment Pending",
+      "Pending",
+      "Not yet",
+      "Not yet",
     ],
     [
       6,
@@ -108,6 +120,8 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "Cash",
+      "Paid",
+      "Sent",
       "Sent",
     ],
     [
@@ -118,7 +132,9 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "PayPal",
-      "Payment Pending",
+      "Pending",
+      "Not yet",
+      "Not yet",
     ],
     [
       8,
@@ -128,7 +144,9 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "PayPal",
-      "Payment Pending",
+      "Pending",
+      "Not yet",
+      "Not yet",
     ],
     [
       9,
@@ -138,6 +156,8 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "Bank Transfer",
+      "Paid",
+      "Sent",
       "Sent",
     ],
     [
@@ -148,7 +168,9 @@ const AdminCertificates = () => {
       "098765432",
       "example@gmail.com",
       "Cash",
-      "Payment Pending",
+      "Pending",
+      "Not yet",
+      "Not yet",
     ],
   ];
 
@@ -201,8 +223,8 @@ const AdminCertificates = () => {
               }}
             />
 
-            <Link to="/adminPaymentGoto" className="link">
-              <li>Go to Payment</li>
+            <Link to="/adminCertificate" className="link">
+              <li>Go to Courses</li>
             </Link>
           </ul>
 
@@ -220,4 +242,5 @@ const AdminCertificates = () => {
     </div>
   );
 };
-export default AdminCertificates;
+export default AdminPaymentGoto;
+;
