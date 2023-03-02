@@ -22,12 +22,9 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
-
-                  <Link to="/" className="adminlinks">
-                <li>
-                    About US
-                </li>
-                  </Link>
+                <Link to="/" className="adminlinks">
+                  <li>About US</li>
+                </Link>
               </Ripples>
             </div>
             <div
@@ -38,13 +35,9 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
-h
-                  <Link to="/course" className="adminlinks">
-                <li>
-
-                    Courses
-                </li>
-                  </Link>
+                <Link to="/course" className="adminlinks">
+                  <li>Courses</li>
+                </Link>
               </Ripples>
             </div>
             <div
@@ -55,13 +48,9 @@ h
               }}
             >
               <Ripples>
-
-                  <Link to="" className="adminlinks">
-                <li>
-
-                    Careers
-                </li>
-                  </Link>
+                <Link to="" className="adminlinks">
+                  <li>Careers</li>
+                </Link>
               </Ripples>
             </div>
             <div
@@ -72,12 +61,9 @@ h
               }}
             >
               <Ripples>
-                  <Link to="" className="adminlinks">
-                <li>
-
-                    Contact
-                </li>
-                  </Link>
+                <Link to="" className="adminlinks">
+                  <li>Contact</li>
+                </Link>
               </Ripples>
             </div>
             <div
@@ -88,13 +74,9 @@ h
               }}
             >
               <Ripples>
-
-                  <Link to="" className="adminlinks">
-                <li>
-
-                    Trainers
-                </li>
-                  </Link>
+                <Link to="" className="adminlinks">
+                  <li>Trainers</li>
+                </Link>
               </Ripples>
             </div>
           </ul>
