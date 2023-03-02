@@ -22,7 +22,14 @@ const Home = () => {
           <div className="home-text">
             <h1>{intro}</h1>
           </div>
-          <div className="home-button">
+          <div
+            className="home-button"
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
             <Ripples>
               <Link to="/course" className="link-tab">
                 <button type="button" className="home-btn">
@@ -33,7 +40,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

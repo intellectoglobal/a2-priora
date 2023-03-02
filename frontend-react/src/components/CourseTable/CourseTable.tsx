@@ -119,23 +119,47 @@ const CourseTable = () => {
           </ThemeProvider>
         </div>
         <div className="coursetable-button">
-          <Ripples>
-            <Link to="/sform/:course" className="link-tab">
-              <button type="button" className="ctable-btn">
-                Cancel
-              </button>
-            </Link>
-          </Ripples>
-          <Ripples>
-            <Link to="/course" className="link-tab">
-              <button className="ctable-btn">Add Another Course</button>
-            </Link>
-          </Ripples>
-          <Ripples>
-            <Link to="/payments" className="link-tab">
-              <button className="ctable-btn">Proceed for Payment</button>
-            </Link>
-          </Ripples>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
+            <Ripples>
+              <Link to="/sform/:course" className="link-tab">
+                <button type="button" className="ctable-btn">
+                  Cancel
+                </button>
+              </Link>
+            </Ripples>
+          </div>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
+            <Ripples>
+              <Link to="/course" className="link-tab">
+                <button className="ctable-btn">Add Another Course</button>
+              </Link>
+            </Ripples>
+          </div>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
+            <Ripples>
+              <Link to="/payments" className="link-tab">
+                <button className="ctable-btn">Proceed for Payment</button>
+              </Link>
+            </Ripples>
+          </div>
         </div>
       </div>
       <Footer />

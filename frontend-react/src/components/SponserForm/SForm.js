@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { userdata } from "../../Redux/UserSlice";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Sform = () => {
   const [values, setValues] = useState({
@@ -52,7 +53,7 @@ const Sform = () => {
   };
   const user = useSelector((state) => state.user.value);
   
-
+const navigate=useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault();
     // console.log(event)
@@ -76,6 +77,7 @@ const Sform = () => {
       membership_no: "",
       payment: "",
     });
+    navigate("/coursetable");
   };
   return { handleChange, values, handleSubmit };
 };

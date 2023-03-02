@@ -157,7 +157,14 @@ const Course = () => {
                 <img src={Star} alt="" />
                 <h5>{course.set} SET</h5>
               </div>
-              <div className="course-button">
+              <div
+                className="course-button"
+                style={{
+                  display: "inline-flex",
+                  borderRadius: 25,
+                  overflow: "hidden",
+                }}
+              >
                 <Ripples>
                   <Link className="link-tab" to={`/sform/${course.coursename}`}>
                     <button type="button" className="course-btn">
