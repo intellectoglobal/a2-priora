@@ -23,9 +23,8 @@ const AdminNavBar = () => {
             >
               <Ripples>
 
-                <li>
                   <Link to="/" className="adminlinks">
-
+                <li>
                     About US
                 </li>
                   </Link>
@@ -40,8 +39,8 @@ const AdminNavBar = () => {
             >
               <Ripples>
 h
-                <li>
                   <Link to="/course" className="adminlinks">
+                <li>
 
                     Courses
                 </li>
@@ -57,8 +56,8 @@ h
             >
               <Ripples>
 
-                <li>
                   <Link to="" className="adminlinks">
+                <li>
 
                     Careers
                 </li>
@@ -73,8 +72,8 @@ h
               }}
             >
               <Ripples>
-                <li>
                   <Link to="" className="adminlinks">
+                <li>
 
                     Contact
                 </li>
@@ -90,8 +89,8 @@ h
             >
               <Ripples>
 
-                <li>
                   <Link to="" className="adminlinks">
+                <li>
 
                     Trainers
                 </li>
