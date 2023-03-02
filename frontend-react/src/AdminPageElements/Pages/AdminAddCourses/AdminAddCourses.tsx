@@ -2,7 +2,6 @@ import React from "react";
 import AdminSideBar from "../AdminSideBar/AdminSideBar.tsx";
 import "./AdminAddCourses.css";
  
-import "./AdminAddCourses.css";
  
 import AddCourse from "../../Components/AddCourse.tsx";
 
