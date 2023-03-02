@@ -13,32 +13,24 @@ const Navbar = () => {
       <div className="nav-links">
         <ul>
           <Ripples>
-            <li>
-              <Link to="/" className="links">
-                Home
-              </Link>
-            </li>
+            <Link to="/" className="links">
+              <li>Home</li>
+            </Link>
           </Ripples>
           <Ripples>
-            <li>
-              <Link to="/course" className="links">
-                Course
-              </Link>
-            </li>
+            <Link to="/course" className="links">
+              <li>Course</li>
+            </Link>
           </Ripples>
           <Ripples>
-            <li>
-              <Link to="" className="links">
-                About
-              </Link>
-            </li>
+            <Link to="" className="links">
+              <li>About</li>
+            </Link>
           </Ripples>
           <Ripples>
-            <li>
-              <Link to="" className="links">
-                Career
-              </Link>
-            </li>
+            <Link to="" className="links">
+              <li>Career</li>
+            </Link>
           </Ripples>
         </ul>
       </div>

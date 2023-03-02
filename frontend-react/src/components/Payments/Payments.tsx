@@ -2,13 +2,14 @@ import React from "react";
 import Navbar from "../Navbar/Navbar.tsx";
 import Footer from "../Footer/Footer.tsx";
 import MUIDataTable from "mui-datatables";
+import { Radio,Form } from "antd";
 import Ripples from "react-ripples";
 import { Link } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FaTrash } from "react-icons/fa";
-import "./CourseTable.css";
+import "./Payments.css";
 
-const CourseTable = () => {
+const Payments = () => {
   const getMuiTheme = () =>
     createTheme({
       components: {
@@ -49,40 +50,36 @@ const CourseTable = () => {
     });
   const columns = [
     "S.No",
-    "Name",
-    "FIN/NRIC/Passport_No",
-    "Selected_Course",
-    "Actions",
+    "Course Title",
+    "FEE",
+    "SubTotal",
   ];
 
+  const grandtotal = 70
   const data = [
     [
       "1",
-      "Joe James",
-      "123456",
       "Structural Pointer Course",
-      <FaTrash style={{ color: "red", cursor: "pointer" }} />,
+      "$ 70",
+      "$ 70"
     ],
     [
       "2",
-      "John Walsh",
-      "678901",
       "Full Stack Course",
-      <FaTrash style={{ color: "red", cursor: "pointer" }} />,
+      "$ 70",
+      "$ 70"
     ],
     [
       "3",
-      "Bob Herm",
-      "111314",
       "Full Stack Course",
-      <FaTrash style={{ color: "red", cursor: "pointer" }} />,
+      "$ 70",
+      "$ 70"
     ],
     [
       "4",
-      "James Houston",
-      "212223",
       "Structural Pointer Course",
-      <FaTrash style={{ color: "red", cursor: "pointer" }} />,
+      "$ 70",
+      "$ 70"
     ],
   ];
 
@@ -92,12 +89,14 @@ const CourseTable = () => {
     selectableRows: false,
     download: false,
     print: false,
+    filter:false,
+    search: false,
     viewColumns: false,
+    pagination:false,
     rowHover: false,
     searchPlaceholder: "Type name to search",
     jumpToPage: false,
     rowsPerPageOptions: false,
-    pagination: true,
     onChangePage(currentPage) {
       console.log({ currentPage });
     },
@@ -109,31 +108,63 @@ const CourseTable = () => {
   return (
     <>
       <Navbar />
-      <div className="coursetable-container">
-        <div className="coursetable-header">
-          <h1>List of Selected Course</h1>
+      <div className="payments-container">
+        <div className="payments-header">
+          <h1>Invoice</h1>
         </div>
         <div className="course-table">
           <ThemeProvider theme={getMuiTheme()}>
             <MUIDataTable data={data} columns={columns} options={options} />
           </ThemeProvider>
         </div>
-        <div className="coursetable-button">
+        <div className="course-total">
+        <div className="payment-type">
+        <Form.Item
+              className="payment-label"
+              label="Payment-Type"
+              style={{ width: "100%", marginBottom: "-1rem" }}
+            >
+              <Radio.Group
+                // value=''
+                name="sponsership_type"
+                buttonStyle="solid"
+                defaultValue="paypal"
+                // onChange={''}
+              >
+                <Radio.Button value="paypal" style={{ fontWeight: "bold"}}>
+                  PayPal
+                </Radio.Button>
+                <Radio.Button value="paynow" style={{ fontWeight: "bold" }}>
+                  PayNow
+                </Radio.Button>
+                <Radio.Button value="bank_transfer" style={{ fontWeight: "bold" }}>
+                  Bank Transfer
+                </Radio.Button>
+                <Radio.Button value="cash" style={{ fontWeight: "bold" }}>
+                  Cash/Nets
+                </Radio.Button>
+              </Radio.Group>
+          </Form.Item>
+        </div>
+          <h1>Grand Total : ${grandtotal}</h1>
+        </div>
+       
+        <div className="payments-button">
           <Ripples>
             <Link to="/sform/:course" className="link-tab">
-              <button type="button" className="ctable-btn">
+              <button type="button" className="payments-btn">
                 Cancel
               </button>
             </Link>
           </Ripples>
           <Ripples>
             <Link to="/course" className="link-tab">
-              <button className="ctable-btn">Add Another Course</button>
+              <button className="payments-btn">Add Another Course</button>
             </Link>
           </Ripples>
           <Ripples>
             <Link to="/payments" className="link-tab">
-              <button className="ctable-btn">Proceed for Payment</button>
+              <button className="payments-btn">Proceed for Payment</button>
             </Link>
           </Ripples>
         </div>
@@ -143,4 +174,4 @@ const CourseTable = () => {
   );
 };
 
-export default CourseTable;
+export default Payments;
