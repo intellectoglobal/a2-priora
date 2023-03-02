@@ -40,13 +40,14 @@ const AdminPayment = () => {
     });
   const columns = [
     "S.No",
-    "Reg Date",
+    "Date",
+    "Course",
     "Name",
     "Fin No.",
-    "Contact No.",
     "Email",
     "Payment Method",
-    "Cert Status",
+    "Pay Status",
+    "Sent Status",
   ];
 
   const data = [
@@ -54,101 +55,112 @@ const AdminPayment = () => {
       1,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "PayPal",
       "Payment Pending",
+      "sent",
     ],
     [
       2,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "Bank Transfer",
       "Sent",
+      "Not Yet",
     ],
     [
       3,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "PayCashPal",
       "Payment Pending",
+      "sent",
     ],
     [
       4,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "PayPal",
       "Payment Pending",
+      "Not Yet",
     ],
     [
       5,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "Bank Transfer",
       "Payment Pending",
+      "sent",
     ],
     [
       6,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "Cash",
       "Sent",
+      "Not Yet",
     ],
     [
       7,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "PayPal",
       "Payment Pending",
+      "Not Yet",
     ],
     [
       8,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "PayPal",
       "Payment Pending",
+      "sent",
+      "Not Yet",
     ],
     [
       9,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "Bank Transfer",
       "Sent",
+      "Not Yet",
     ],
     [
       10,
       "01 Sep 2021",
       "AAAAAAAAAA",
-      "123456789",
+      "AAAAAAAAAA",
       "098765432",
       "example@gmail.com",
       "Cash",
       "Payment Pending",
+      "sent",
     ],
   ];
 
@@ -175,37 +187,6 @@ const AdminPayment = () => {
       <AdminSideBar />
       <div className="table-container">
         <div className="table">
-          <ul>
-            <TextField
-              id="outlined-selet-currency"
-              select
-              label="Select Course"
-              sx={{
-                width: "15vw",
-              }}
-            />
-            <TextField
-              id="outlined-selet-currency"
-              select
-              label="Run"
-              sx={{
-                width: "5vw",
-              }}
-            ></TextField>
-
-            <TextField
-              id="outlined"
-              label="Start Date"
-              sx={{
-                width: "15vw",
-              }}
-            />
-
-            <Link to="" className="link">
-              <li>Go to Payment</li>
-            </Link>
-          </ul>
-
           <div className="tabldfve-btn-links "></div>
           <ThemeProvider theme={getMuiTheme()}>
             <MUIDataTable
