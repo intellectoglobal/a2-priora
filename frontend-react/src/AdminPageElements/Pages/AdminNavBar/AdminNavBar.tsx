@@ -22,7 +22,8 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
-                  <Link to="/" className="links">
+
+                  <Link to="/" className="adminlinks">
                 <li>
                     About US
                 </li>
@@ -37,8 +38,10 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
-                  <Link to="/course" className="links">
+h
+                  <Link to="/course" className="adminlinks">
                 <li>
+
                     Courses
                 </li>
                   </Link>
@@ -52,8 +55,10 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
-                  <Link to="" className="links">
+
+                  <Link to="" className="adminlinks">
                 <li>
+
                     Careers
                 </li>
                   </Link>
@@ -67,8 +72,9 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
-                  <Link to="" className="links">
+                  <Link to="" className="adminlinks">
                 <li>
+
                     Contact
                 </li>
                   </Link>
@@ -82,8 +88,10 @@ const AdminNavBar = () => {
               }}
             >
               <Ripples>
-                  <Link to="" className="links">
+
+                  <Link to="" className="adminlinks">
                 <li>
+
                     Trainers
                 </li>
                   </Link>
