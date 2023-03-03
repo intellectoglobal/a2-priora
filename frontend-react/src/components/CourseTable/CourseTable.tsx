@@ -9,6 +9,7 @@ import { FaTrash } from "react-icons/fa";
 import "./CourseTable.css";
 
 const CourseTable = () => {
+
   const getMuiTheme = () =>
     createTheme({
       components: {
@@ -47,6 +48,9 @@ const CourseTable = () => {
         },
       },
     });
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const columns = [
     "S.No",
     "Name",
