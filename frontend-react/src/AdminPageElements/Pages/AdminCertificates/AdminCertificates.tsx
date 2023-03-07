@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AdminSideBar from "../AdminSideBar/AdminSideBar.tsx";
 import MUIDataTable from "mui-datatables";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -6,215 +6,193 @@ import "./AdminCertificates.css";
 import Ripples from "react-ripples";
 import { Link } from "react-router-dom";
 import { TextField } from "@mui/material";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import {
+  DataGrid,
+  GridRenderCellParams,
+  GridColDef,
+  useGridApiContext,
+} from "@mui/x-data-grid";
+import { GridCellEditStopReasons } from "@mui/x-data-grid";
+import {
+  randomCreatedDate,
+  randomTraderName,
+  randomUpdatedDate,
+} from "@mui/x-data-grid-generator";
+
+function SelectEditInputCell(props: GridRenderCellParams) {
+  const { id, value, field } = props;
+  const apiRef = useGridApiContext();
+
+  const handleChange = async (event: SelectChangeEvent) => {
+    await apiRef.current.setEditCellValue({
+      id,
+      field,
+      value: event.target.value,
+    });
+    apiRef.current.stopCellEditMode({ id, field });
+  };
+
+  return (
+    <Select
+      value={value}
+      onChange={handleChange}
+      size="small"
+      sx={{ height: 1 }}
+      native
+      autoFocus
+    >
+      <option>Back-end Developer</option>
+      <option>Front-end Developer</option>
+      <option>UX Designer</option>
+    </Select>
+  );
+}
+
+const renderSelectEditInputCell: GridColDef["renderCell"] = (params) => {
+  return <SelectEditInputCell {...params} />;
+};
+
+const data = [
+  {
+    id: 1,
+    sno: 1,
+    reg_date: "2-3-2023",
+    name: "AAAAAAAAAA",
+    FIN_no: 1234567890,
+    contact_no: 987654321,
+    email: "example@gmail.com",
+    payment_method: "PayPal",
+    cert_status: "Sent",
+  },
+  {
+    id: 2,
+    sno: 2,
+    reg_date: "2-3-2023",
+    name: "AAAAAAAAAA",
+    FIN_no: 1234567890,
+    contact_no: 987654321,
+    email: "example@gmail.com",
+    payment_method: "PayPal",
+    cert_status: "Sent",
+  },
+  {
+    id: 3,
+    sno: 3,
+    reg_date: "2-3-2023",
+    name: "AAAAAAAAAA",
+    FIN_no: 1234567890,
+    contact_no: 987654321,
+    email: "example@gmail.com",
+    payment_method: "PayPal",
+    cert_status: "Sent",
+  },
+  {
+    id: 4,
+    sno: 4,
+    reg_date: "2-3-2023",
+    name: "AAAAAAAAAA",
+    FIN_no: 1234567890,
+    contact_no: 987654321,
+    email: "example@gmail.com",
+    payment_method: "PayPal",
+    cert_status: "Sent",
+  },
+  {
+    id: 5,
+    sno: 5,
+    reg_date: "2-3-2023",
+    name: "AAAAAAAAAA",
+    FIN_no: 1234567890,
+    contact_no: 987654321,
+    email: "example@gmail.com",
+    payment_method: "PayPal",
+    cert_status: "Sent",
+  },
+];
 
 const AdminCertificates = () => {
-  const getMuiTheme = () =>
-    createTheme({
-      components: {
-        MUIDataTableBodyRow: {
-          styleOverrides: {
-            root: {
-              "&:nth-child(even)": {
-                backgroundColor: "#D9D9D9",
-              },
-            },
-          },
-        },
-        MUIDataTableHeadCell: {
-          styleOverrides: {
-            root: {
-              backgroundColor: "#D9D9D9",
-            },
-          },
-        },
-        MuiTableCell: {
-          styleOverrides: {
-            root: {
-              fontSize: "1vw",
-              textAlign: "center",
-              padding: "10px 8px",
-            },
-          },
-        },
-      },
-    });
   const columns = [
-    "S.No",
-    "Reg Date",
-    "Name",
-    "Fin No.",
-    "Contact No.",
-    "Email",
-    "Payment Method",
-    "Cert Status",
+    { field: "sno", headerName: "S No", width: 80, editable: false },
+    {
+      field: "reg_date",
+      headerName: "Reg Date",
+      type: "date",
+      width: 180,
+      editable: false,
+    },
+    {
+      field: "name",
+      headerName: "Name",
+      type: "string",
+      width: 200,
+      editable: true,
+    },
+    {
+      field: "FIN_no",
+      headerName: "FIN No",
+      type: "number",
+      width: 200,
+      editable: true,
+    },
+    {
+      field: "contact_no",
+      headerName: "Contact No",
+      type: "number",
+      width: 200,
+      editable: true,
+    },
+    {
+      field: "email",
+      headerName: "Email",
+      type: "string",
+      width: 200,
+      editable: true,
+    },
+    {
+      field: "payment_method",
+      headerName: "Payment Method",
+
+      width: 180,
+      editable: false,
+    },
+    {
+      field: "cert_status",
+      headerName: "Cert Status",
+
+      width: 180,
+      editable: false,
+    },
   ];
 
-  const data = [
-    [
-      1,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "PayPal",
-      "Payment Pending",
-    ],
-    [
-      2,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "Bank Transfer",
-      "Sent",
-    ],
-    [
-      3,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "PayCashPal",
-      "Payment Pending",
-    ],
-    [
-      4,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "PayPal",
-      "Payment Pending",
-    ],
-    [
-      5,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "Bank Transfer",
-      "Payment Pending",
-    ],
-    [
-      6,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "Cash",
-      "Sent",
-    ],
-    [
-      7,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "PayPal",
-      "Payment Pending",
-    ],
-    [
-      8,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "PayPal",
-      "Payment Pending",
-    ],
-    [
-      9,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "Bank Transfer",
-      "Sent",
-    ],
-    [
-      10,
-      "01 Sep 2021",
-      "AAAAAAAAAA",
-      "123456789",
-      "098765432",
-      "example@gmail.com",
-      "Cash",
-      "Payment Pending",
-    ],
-  ];
+  const [tableData, setTableData] = useState([]);
+  useEffect(() => {
+    setTableData(data);
+  }, []);
 
-  const options = {
-    filterType: "dropdown",
-    selectableRows: false,
-    download: false,
-    print: false,
-    viewColumns: false,
-    rowHover: false,
-    searchPlaceholder: "Type name to search",
-    jumpToPage: false,
-    rowsPerPageOptions: false,
-    pagination: true,
-    onChangePage(currentPage) {
-      console.log({ currentPage });
-    },
-    onChangeRowsPerPage(numberOfRows) {
-      console.log({ numberOfRows });
-    },
-  };
+    const options = {
+        responsive:"standard"
+    }
+
   return (
     <div>
       <AdminSideBar />
       <div className="table-container">
         <div className="table">
-          <ul>
-            <TextField
-              id="outlined-selet-currency"
-              select
-              label="Select Course"
-              sx={{
-                width: "15vw",
+          <div style={{ height: 300, width: "100%" }}>
+            <DataGrid
+              rows={tableData}
+                          columns={columns}
+                          options={options}
+                          
+              experimentalFeatures={{ newEditingApi: true }}
+              onCellEditStop={(params, event) => {
+                if (params.reason === GridCellEditStopReasons.cellFocusOut) {
+                  event.defaultMuiPrevented = true;
+                }
               }}
             />
-            <TextField
-              id="outlined-selet-currency"
-              select
-              label="Run"
-              sx={{
-                width: "5vw",
-              }}
-            ></TextField>
-
-            <TextField
-              id="outlined"
-              label="Start Date"
-              sx={{
-                width: "15vw",
-              }}
-            />
-
-            <Link to="/adminPaymentGoto" className="link">
-              <li>Go to Payment</li>
-            </Link>
-          </ul>
-
-          <div className="tabldfve-btn-links "></div>
-          <ThemeProvider theme={getMuiTheme()}>
-            <MUIDataTable
-              data={data}
-              editMode="row"
-              columns={columns}
-              options={options}
-            />
-          </ThemeProvider>
+          </div>
         </div>
       </div>
     </div>

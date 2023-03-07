@@ -21,3 +21,11 @@ ul li:hover {
     color: #000;
     text-decoration: none;
 }
+.MuiDataGrid-columnHeaderTitleContainer{
+    justify-content: space-around!important;
+}
+.MuiDataGrid-row {
+    
+    justify-content: space-evenly!important;
+    flex-wrap: wrap!important;
+}
