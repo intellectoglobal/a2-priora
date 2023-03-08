@@ -57,11 +57,11 @@ const Course = sequelize.define('Course', {
 });
 
 sequelize.sync()
-    .then(() => {
-        console.log('Course table created successfully');
-    })
-    .catch((err) => {
-        console.error('Unable to create user table:', err);
-    });
+.then(() => {
+    console.log('Course table created successfully');
+})
+.catch((err) => {
+    console.error('Unable to create user table:', err);
+});
 
 module.exports = Course;

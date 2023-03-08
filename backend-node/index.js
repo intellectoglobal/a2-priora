@@ -24,6 +24,9 @@ const password =()=>{
 const sequelize = new Sequelize("a2priora", "postgres", process.env.DB_PASS, {
   host: "localhost",
   dialect: "postgres",
+  dialectOptions: {
+   
+  }
  });
 
 sequelize
