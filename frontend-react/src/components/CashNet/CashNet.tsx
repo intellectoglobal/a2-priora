@@ -1,67 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
+import "./CashNet.css";
 import Navbar from "../Navbar/Navbar.tsx";
 import Footer from "../Footer/Footer.tsx";
-import "./CashNet.css";
 import Ripples from "react-ripples";
 import { Link } from "react-router-dom";
-import "./CashNet.css"
-import CashPopup from "./CashPopup.tsx";
+import CashPopup from "./CashPopup/CashPopup.tsx";
 
 function CashNet() {
+  const [popup, setPopup] = useState(false);
   return (
     <>
       <Navbar />
       <div className="cash-container">
         <div className="cash-content">
-          <h1>Payment Type: Cash/Nets </h1>
-          <h1 align="Right">Grand Total: </h1>
+          <h1>Payment Type:Cash/Nets</h1>
+          <h1>Grand Total: </h1>
         </div>
         <div className="cash-container1">
           <div className="cash-content1">
-            <h2>Kindly Transfer to this Bank Account:</h2>
-            <h4>Bank Name:</h4>
-            <h4>Account Number :</h4>
-            <h4>Account Holder :</h4>
-            <h4>Bank Code :</h4>
-            <h4>IFSC Code :</h4>
-          </div>
-          <div className="cash-content2">
-            <p>
-              Once payment was done, Kindly take a screenshort or Snapshort of
-              Recipt. And Upload it here.(Receipt in the form of JPG(Image) or
-              PDF Format.)
-            </p>
+            <h2>
+              You can make payment directly on the course date, to reception
+              table before enter into the class.
+            </h2>
+            <h4 style={{ color: "red" }}>
+              Note: If you reserve seat by cash payment method, your seat is
+              reserved. But if you not able to attend the course, must need to
+              inform us before one day. If you register and not attend the class
+              and didn’t notify to us, we will ban your NRIC for next 1 Year.
+            </h4>
           </div>
         </div>
 
         <div className="cash-buttons">
-          <Ripples>
-            <Link to="" className="link-tab">
-              <button type="submit" className="cash-btn">
-                Back
-              </button>
-            </Link>
-          </Ripples>
-
-          <Ripples>
-            <Link to="" className="link-tab">
-              <button type="submit" className="cash-btn">
-                Cancel
-              </button>
-            </Link>
-          </Ripples>
-
-          <Ripples>
-            <Link to="" className="link-tab">
-              <button type="submit" className="cash-btn">
-                Upload
-              </button>
-            </Link>
-          </Ripples>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
+            <Ripples>
+              <Link to="/payments" className="link-tab">
+                <button type="submit" className="cash-btn">
+                  Back
+                </button>
+              </Link>
+            </Ripples>
+          </div>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
+            <Ripples>
+              <Link to="/coursetable" className="link-tab">
+                <button type="submit" className="cash-btn">
+                  Cancel
+                </button>
+              </Link>
+            </Ripples>
+          </div>
+          <div
+            style={{
+              display: "inline-flex",
+              borderRadius: 25,
+              overflow: "hidden",
+            }}
+          >
+            <Ripples>
+              <Link to="" className="link-tab">
+                <button type="submit" className="cash-btn">
+                  Done
+                </button>
+              </Link>
+            </Ripples>
+          </div>
         </div>
       </div>
-      <CashPopup/>
-      <Footer />
+      <div
+        className="popup"
+        style={{ display: popup === true ? "block" : "none" }}
+      >
+        {/* <CashPopup setPopup={setPopup}/> */}
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
     </>
   );
 }
