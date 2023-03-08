@@ -22,7 +22,7 @@ function CashNet() {
               You can make payment directly on the course date, to reception
               table before enter into the class.
             </h2>
-            <h4 style={{color:'red'}}>
+            <h4 style={{ color: "red" }}>
               Note: If you reserve seat by cash payment method, your seat is
               reserved. But if you not able to attend the course, must need to
               inform us before one day. If you register and not attend the class
@@ -71,10 +71,7 @@ function CashNet() {
           >
             <Ripples>
               <Link to="" className="link-tab">
-                <button
-                  type="submit"
-                  className="cash-btn"
-                >
+                <button type="submit" className="cash-btn">
                   Done
                 </button>
               </Link>
@@ -88,7 +85,9 @@ function CashNet() {
       >
         {/* <CashPopup setPopup={setPopup}/> */}
       </div>
-      <Footer />
+      <div className="footer">
+        <Footer />
+      </div>
     </>
   );
 }
