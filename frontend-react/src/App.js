@@ -38,7 +38,7 @@ function App() {
         {/* <Route path="/careers" element={<Careers/>}/> */}
         <Route path="/cashnet" element={<CashNet />} />
         <Route path="/course" element={<Course />} />
-        <Route path="/sform/:course" element={<SponserForm />} />
+        <Route path="/sform" element={<SponserForm />} />
         <Route path="/coursetable" element={<CourseTable />} />
         <Route path="/payments" element={<Payments />} />
         <Route path="/paynow" element={<Paynow />} />
