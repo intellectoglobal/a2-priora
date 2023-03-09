@@ -1,9 +1,9 @@
 const { Sequelize,DataTypes } = require('sequelize');
-const sequelize = new Sequelize('postgres::memory:');
-// const sequelize = require('../index.js').sequelize;
+const sequelize = require('../sequelize');
 
 const Course = sequelize.define('Course', {
     course_id:{
+        autoIncrement:true,
         type: DataTypes.INTEGER,
         allowNull: false,
         unique:true,
@@ -65,3 +65,4 @@ sequelize.sync()
 });
 
 module.exports = Course;
+    
