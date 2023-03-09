@@ -49,7 +49,7 @@ class CertificateStatus(APIView):
                 "run": i.selected_course.run,
                 "date": i.selected_course.course_addded_date,
                 "reg_date": "",
-                "aame": i.applicant_name,
+                "name": i.applicant_name,
                 "FIN_no": i.FIN_NRIC_Passport_no,
                 "contact_no": i.contact_no,
                 "email": i.email,
