@@ -1,5 +1,4 @@
 const { Sequelize, Datatypes } = require("sequlize");
-
 const ScheduleCourse = Sequelize.define("ScheduleCourse", {
   select_course: {},
   run: {
