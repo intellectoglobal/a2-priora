@@ -29,12 +29,14 @@ const corsOrigin = {
 };
 
 const courseSchema = require("./Routes/CourseRoute");
+const CourseRegisterSchema = require("./Routes/CourseRegisterRoute");
 
 app.use(express.json());
 
 app.use(cors(corsOrigin));
 
 app.use("/course", courseSchema);
+app.use("/courseRegister", CourseRegisterSchema);
 
 app.listen(5000, () => {
   console.log(`Server listening on port ${PORT}`);

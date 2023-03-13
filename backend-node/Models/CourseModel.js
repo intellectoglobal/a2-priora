@@ -61,7 +61,7 @@ sequelize.sync()
     console.log('Course table created successfully');
 })
 .catch((err) => {
-    console.error('Unable to create user table:', err);
+    console.error('Unable to create course table:', err);
 });
 
 module.exports = Course;

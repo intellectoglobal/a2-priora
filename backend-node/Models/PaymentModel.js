@@ -1,5 +1,6 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = require("../sequelize");
+// const Course= require('./CourseModel')
 
 const Payments = sequelize.define("Payments", {
   payment_id: {
@@ -22,6 +23,8 @@ const Payments = sequelize.define("Payments", {
     allowNull: false,
   },
 });
+
+
 
 sequelize
   .sync()
