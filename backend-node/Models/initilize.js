@@ -2,22 +2,29 @@ const sequelize = require("../sequelize");
 const Course = require("./CourseModel");
 const CourseRegister = require("./CourseRegisterModel");
 const Payments = require("./PaymentModel");
+const ScheduledCourse=require("./ScheduleCourseModel");
 
 Course.hasMany(CourseRegister, {
   foreignKey: "selected_course",
-  allowNull:false,
+  allowNull: false,
 });
 Payments.hasMany(CourseRegister, {
   foreignKey: "payments",
-  allowNull:false,
+  allowNull: false,
 });
+Course.hasMany(ScheduledCourse,{
+    foreignKey:"selected_course",
+    allowNull: false,
+})
 
 sequelize
   .sync({ force: true })
-  .then(() => {
-    console.log("Course table created successfully");
+  .then((result) => {
+    console.log(result);
+    console.log("Table has been created")
   })
   .catch((err) => {
     console.error("Unable to create course table:", err);
   });
-const initilize = module.exports ;
+
+const initilize = module.exports;
