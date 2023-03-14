@@ -5,6 +5,7 @@ const PORT = 5000;
 const sequelize = require("./sequelize");
 require("dotenv").config();
 const config = require("./Config");
+require("./Models/initilize")
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -36,7 +37,7 @@ app.use(express.json());
 app.use(cors(corsOrigin));
 
 app.use("/course", courseSchema);
-app.use("/courseRegister", CourseRegisterSchema);
+app.use("/courseregister", CourseRegisterSchema);
 
 app.listen(5000, () => {
   console.log(`Server listening on port ${PORT}`);

@@ -1,38 +1,39 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = require("../sequelize");
-// const Course= require('./CourseModel')
 
-const Payments = sequelize.define("Payments", {
-  payment_id: {
-    autoIncrement: true,
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    unique: true,
-    primaryKey: true,
+const Payments = sequelize.define(
+  "Payments",
+  {
+    payment_id: {
+      autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: true,
+      primaryKey: true,
+    },
+    payment_mode: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    payment_status: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    payment_receipt: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
-  payment_mode: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  payment_status: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  payment_receipt: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-});
+  {
+    freezeTableName: true,
+    // timestamps: false,
+  }
+);
 
-
-
-sequelize
-  .sync()
-  .then(() => {
-    console.log("Course table created successfully");
-  })
-  .catch((err) => {
-    console.error("Unable to create user table:", err);
-  });
+// Payments.associate = function (models) {
+//   Payments.hasMany(models.CourseRegister, {
+//     foreignKey: "payment",
+//   });
+// };
 
 module.exports = Payments;

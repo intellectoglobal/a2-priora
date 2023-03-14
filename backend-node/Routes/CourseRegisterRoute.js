@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const CourseRegisterSchema=require("../Models/CoureseRegisterModel");
+const CourseRegisterSchema=require("../Models/CourseRegisterModel");
 
 router.post("/courseregisterdata", (req, res) => {
     CourseRegisterSchema.create(req.body)
+    // console.log(req.body)
       .then((course) => {
         res
           .status(201)
